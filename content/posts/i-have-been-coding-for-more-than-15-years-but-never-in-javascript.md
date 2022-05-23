@@ -18,7 +18,7 @@ During college, I was fairly proficient with `Python` and thus, I thought that d
 
 A couple of months ago, at the time of writing this article, I changed jobs. I joined a Belgium based startup, [Wequity](https://wequity.app/), with the ambition to use finance to promote sustainable investment. This mission would materialize in a ESG (Environment Social Governance) dashboard, where end-users can monitor how well companies are doing in those dimensions. In order to make that happen, we built a pipeline to fetch articles and social media posts from the web and extract the ones about ESG. Great! We had those data, but we were struggling to allow our clients to access it with a good user experience. So we hired a lead full-stack developer.
 
-Once again, he would be able to create an awesome web app with dynamic graphs. I was amazed. Talking with my colleague, he told me how quick it is possible to become proficient with web development using `JavaScript`. Tools I had never used before, although I know they are standards in the web industry.
+Once again, he would be able to create an awesome web app with dynamic graphs. I was amazed. Talking with my colleague, he told me how quick it is possible to become proficient with web development using `JavaScript` especially with `Node.JS`. Tools I had never used before, although I know they are standards in the web industry.
 
 `JavaScript` sometimes has a bad reputation, I never really understood why, arguments often seems pretty subjective such as "it is an ugly language" or "it is error-prone". I decided it was time for me to make my own opinion! And to that end, I built this website with in `JavaScript` running on a `Node.JS` server.
 
@@ -42,7 +42,7 @@ Okay, now I am learning about `JavaScript`, what do I do now? Hey, remember [tha
 
 I met Duarte when I joined Wequity, he is a great Machine Learning Engineer, and was helping the project. He is also a blogger, so naturally I asked him how he made his website. He explained me that it was actually a statically generated website, using the so called [Jamstack](https://jamstack.org/).
 
-I decided to reinvent the wheel and built something similar, but using what I am learning. Of course, this website is unlikely to be efficient, but that is not the point. The point is to practice, get better, and share my journey along the way.
+I decided to reinvent the wheel and built something similar, but using what I am learning. Of course, this website is unlikely to be efficient, but that is not the point. The point is to practice, get better, and share my journey along the way. Please feel free to check out my coding skills, I made this website's code public on [a GitHub repository](https://github.com/simonpicard/simonmyway.com).
 
 Which bring me to the end of this post. So what can you expect? Well, basically anything I feel like sharing. Currently, my area of interest are mainly tech and sports. I already have a couple of ideas for future posts about those, in the meantime you can already check out [some videos I made](/videos). I also intend to make this website evolve, maybe some day I will transform it to a single page app, or try the latest and greatest frameworks.
 
