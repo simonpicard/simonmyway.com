@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,500,500italic,700');
+
+
+:root {
+  --color-light-primary: #111;
+  --color-light-secondary: #111;
+  --color-light-background: #fff;
+  --color-light-code: #fff;
+  --color-light-code-background: #fff;
+  --color-light-filtering: 0%;
+  --color-dark-primary: #c9d1d9;
+  --color-dark-secondary: #c9d1d9;
+  --color-dark-background: #0d1117;
+  --color-dark-code: #0d1117;
+  --color-dark-code-background: #0d1117;
+  --color-dark-filtering: 100%;
+  --color-dark-border-default: #30363d;
+  --color-dark-canvas-subtle: #161b22;
+  --primary: var(--color-dark-primary);
+  --secondary: var(--color-dark-secondary);
+  --background: var(--color-dark-background);
+  --image-filtering: var(--color-dark-filtering);
+  --code-color: var(--color-dark-code);
+  --code-background: var(--color-dark-code-background);
+  --color-border-default: var(--color-dark-border-default);
+  --color-canvas-subtle: var(--color-dark-canvas-subtle);
+  --base-font: 'Open Sans', -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial,
+    sans-serif;
+  --code-font: San Francisco Mono, Monaco, "Consolas", "Lucida Console",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  --font-size: 1rem;
+  --body-width: 800px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+body {
+  color: var(--secondary);
+  background-color: var(--background);
+  font-family: var(--base-font);
+  margin: 0 auto;
+  font-size: var(--font-size);
+  line-height: 1.6;
+  padding-top: 20px;
+  text-rendering: optimizeLegibility
+}
+
+.container {
+  max-width: var(--body-width);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.main-content img {
+  max-width: 100%;
+}
+
+.main-content p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.no-top>:first-child {
+  margin-top: 0;
+  line-height: 1.25
+}
+
+.vertical-spacing {
+  padding-top: 20px;
+  padding-bottom: 20px
+}
+
+.Box {
+  border-color: var(--color-border-default);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+div.Box>h1:first-child,
+div.Box>p:first-child {
+  padding: 16px 20px;
+  margin: -20px -20px 12px;
+  background-color: var(--color-canvas-subtle);
+  border-color: var(--color-border-default);
+  border-style: solid;
+  border-width: 1px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+header {
+  letter-spacing: -.009em
+}
+
+header h1 {
+  line-height: 1.6;
+  font-size: 1rem;
+  letter-spacing: 0.004rem;
+  margin: 0 0 0.25em 0;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-list {
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-columns: 1fr min-content
+}
+
+.article-list time {
+  padding-right: .25em;
+  color: var(--secondary);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.012em;
+  white-space: pre
+}
+
+.article-list>div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.article-list a {
+  font-weight: 500;
+  letter-spacing: -.015em
+}
+
+a {
+  color: var(--secondary);
+  text-decoration-skip-ink: auto;
+  text-decoration: underline
+}
+
+a:visited {
+  color: var(--secondary)
+}
+
+.nu a {
+  text-decoration: none
+}
+
+.nu a:hover {
+  text-decoration: underline
+}
+
+code {
+  font-family: var(--code-font);
+  font-size: 90%
+}
+
+pre code {
+  display: block;
+  background: 0 0;
+  white-space: pre;
+  --webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 100px;
+  line-height: 1.5;
+  padding-top: 10px;
+  padding-bottom: 10px
+}
+
+footer {
+  padding-top: 0;
+  padding-bottom: 20px
+}
+
+div.gallery {
+  padding-top: 10px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+div.gallery>div {
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+div.gallery a {
+  font-weight: 500;
+  letter-spacing: -.015em
+}
+
+div.gallery time {
+  padding-right: .25em;
+  color: var(--secondary);
+  letter-spacing: -.012em;
+  display: block;
+  font-size: 90%
+}
+
+div.gallery img {
+  object-fit: cover;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%
+}
+
+@media screen and (min-width:1024px) {
+  header {
+    position: absolute;
+    top: 38px;
+    right: 50%;
+    /* margin-right: 340px !important; */
+    margin-right: calc(var(--body-width) / 2 + 20px) !important;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  header {
+    padding-bottom: 20px
+  }
+
+  /* .separator {
+    border-top: 1px solid;
+    border-color: var(--secondary)
+  } */
+
+  div.gallery {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width:640px) {
+  header {
+    padding-bottom: 20px
+  }
+
+  .container {
+    width: auto
+  }
+
+  .article-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 0
+  }
+
+  .article-list>div {
+    white-space: normal
+  }
+
+  .article-list time {
+    padding-bottom: 20px;
+    padding-right: 0
+  }
+
+  .nu a {
+    text-decoration: underline
+  }
+
+  .nu a:hover {
+    text-decoration: underline
+  }
+
+  div.gallery {
+    gap: 2px;
+    grid-template-columns: repeat(1, 1fr)
+  }
+}

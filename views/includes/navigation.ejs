@@ -1,0 +1,18 @@
+<header class="container nu">
+    <h1>
+        <a href="/">
+            Simon Myway
+        </a>
+    </h1>
+    <ul>
+        <% for (let page of pages) { %>
+        <li>
+            <a href="/<%= page.slug %>">
+                <%= page.title %>
+            </a>
+        </li>
+        <% } %>
+    </ul>
+</header>
+<div class="separator vertical-spacing">
+    <div class="container no-top main-content Box">
