@@ -20,7 +20,6 @@
   "dependencies": {
     "axios": "^0.27.2",
     "compression": "^1.7.4",
-    "dom-parser": "^0.1.6",
     "ejs": "^3.1.8",
     "express": "^4.16.3",
     "helmet": "^5.1.0",
