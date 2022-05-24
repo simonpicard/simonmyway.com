@@ -1,0 +1,11 @@
+{
+    "name": "Simon Myway",
+    "short_name": "Simon Myway",
+    "description": "Hi, and welcome! While on my way, I am happy to share some of my thoughts with you - Simon",
+    "icons": [],
+    "theme_color": "#0d1117",
+    "background_color": "#0d1117",
+    "display": "standalone",
+    "dir": "ltr",
+    "lang": "en"
+}
