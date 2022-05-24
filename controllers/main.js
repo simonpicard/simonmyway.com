@@ -15,8 +15,10 @@ exports.get_page = (req, res, next) => {
         Page.find_all_headers(pages => {
             res.render('page', {
                 title: page.title,
+                description: page.description,
                 page: page,
-                pages: pages
+                pages: pages,
+                relative_path: `${page_slug}`
             });
         });
     });
@@ -27,8 +29,10 @@ exports.get_index = (req, res, next) => {
         Page.find_all_headers(pages => {
             res.render('index', {
                 title: "Simon Myway",
+                description: "Hi, and welcome! While on my way, I am happy to share some of my thoughts with you - Simon",
                 posts: posts,
-                pages: pages
+                pages: pages,
+                relative_path: ''
             });
         });
     });
@@ -43,8 +47,10 @@ exports.get_post = (req, res, next) => {
         Page.find_all_headers(pages => {
             res.render('post', {
                 title: post.title,
+                description: post.description,
                 post: post,
-                pages: pages
+                pages: pages,
+                relative_path: `blog/${post_slug}`
             });
         });
     });
@@ -55,33 +61,11 @@ exports.get_videos = (req, res, next) => {
         Page.find_all_headers(pages => {
             return res.render('videos', {
                 title: 'Videos',
+                description: "A collection of my videos.",
                 videos: videos,
-                pages: pages
+                pages: pages,
+                relative_path: 'videos'
             });
         });
-    });
-};
-
-exports.get_videos_bkp = (req, res, next) => {
-    fetch_videos(youtube_channel_id, youtube_key).then(response => {
-        const videos = response.items.map(item => {
-            return {
-                title: item.snippet.title,
-                description: item.snippet.description,
-                date: new Date(item.snippet.publishedAt),
-                thumbnail: item.snippet.thumbnails.medium.url,
-                video_id: item.id.videoId
-            }
-        });
-        console.log(JSON.stringify(videos));
-        Page.find_all_headers(pages => {
-            return res.render('videos', {
-                title: 'Videos',
-                videos: videos,
-                pages: pages
-            });
-        });
-    }).catch(err => {
-        return res.redirect("/");
     });
 };

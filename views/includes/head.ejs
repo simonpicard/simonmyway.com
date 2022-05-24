@@ -5,7 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>
-        <%= title %>
-    </title>
+    <title><%= title %></title>
+    <meta name="author" content="Simon Myway" />
+    <meta name="description" content="<%= description %>">
+    <meta name="robots" content="all" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="<%= title %>">
+    <meta property="og:site_name" content="Simon Myway" />
+    <% if(relative_path.includes("blog/")){ %>
+    <meta property="og:type" content="article" />
+    <% } else { %>
+    <meta property="og:type" content="website" />
+    <% } %>
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:url" content="<%= process.env.BASE_URL %><%= relative_path %>" />
+    <meta property="og:description" content="<%= description %>" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Simon Myway">
+    <meta name="twitter:creator" content="Simon Myway">
+    <meta name="twitter:url" content="<%= process.env.BASE_URL %><%= relative_path %>">
+    <meta name="twitter:title" content="<%= title %>">
+    <meta name="twitter:description" content="<%= description %>">
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Blog",
+            "name": "<%= title %>",
+            "url": "<%= process.env.BASE_URL %><%= relative_path %>",
+            "description": "<%= description %>"
+
+        }
+    </script>
+
     <link rel="stylesheet" href="/css/main.css">

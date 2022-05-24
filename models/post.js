@@ -3,6 +3,8 @@ const path = require('path');
 const md = require('markdown-it')({
     html: true,
 });
+const jsdom = require("jsdom");
+
 
 const posts_dir = path.join(
     path.dirname(require.main.filename),
@@ -44,6 +46,8 @@ module.exports = class Post {
                 } else {
                     post.date = new Date(post.date);
                     post.content = md.render(file_content);
+                    const doc = new jsdom.JSDOM(post.content);
+                    post.description = doc.window.document.querySelector("p").textContent;
                     cb(post);
                 }
             });
