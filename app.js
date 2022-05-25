@@ -16,6 +16,8 @@ app.use(
         contentSecurityPolicy: {
             directives: {
                 "img-src": ["'self'", "data:", "https:"],
+                "script-src": ["'self'", "plausible.io"],
+                "connect-src": ["'self'", "plausible.io"],
             },
         },
     })
