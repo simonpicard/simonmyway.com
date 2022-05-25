@@ -21,13 +21,6 @@ app.use(
     })
 );
 
-const sixMonthsInSeconds = 15768000;
-
-if (process.env.NODE_ENV != "development") {
-    console.log("Enabling SSL");
-
-    app.use(helmet.hsts({ maxAge: sixMonthsInSeconds }));
-}
 app.use(compression());
 
 app.use(express.static(path.join(__dirname, "public")));
