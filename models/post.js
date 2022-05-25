@@ -2,7 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const md = require("markdown-it")({
     html: true,
-});
+}).use(require("markdown-it-decorate"));
+
 const jsdom = require("jsdom");
 
 const posts_dir = path.join(

@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const md = require("markdown-it")({
     html: true,
-});
+}).use(require("markdown-it-decorate"));
 
 const pages_dir = path.join(
     path.dirname(require.main.filename),

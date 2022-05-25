@@ -99,6 +99,12 @@ div.Box > p:first-child {
     border-top-right-radius: 6px;
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 header {
     letter-spacing: -0.009em;
 }

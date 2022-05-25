@@ -48,7 +48,7 @@ However, I will stick to `JavaScript`. Indeed, it is widely used, and I believe 
 
 Okay, I am learning about `JavaScript`, what do I do now? Hey, remember [that cool blog from Duarte](https://duarteocarmo.com/)? Let's make one too! ~~Any resemblance is purely coincidental.~~
 
-I met Duarte when I joined Wequity, he is a great Machine Learning Engineer, and was helping the project. He is also a blogger, so naturally I asked him how he made his website. He explained me that it was actually a statically generated website, using the so called [Jamstack](https://jamstack.org/).
+I met Duarte when I joined Wequity, he is a great Machine Learning Engineer, and was helping the project. He is also a blogger, so naturally I asked him how he made his website. He explained to me that it was actually a statically generated website, using the so called [Jamstack](https://jamstack.org/).
 
 I decided to reinvent the wheel and built something similar, but using what I am learning. Of course, this website is unlikely to be efficient, but that is not the point. The point is to practice, get better, and share my journey along the way. Please feel free to check out my coding skills, as I made this website [open source](https://github.com/simonpicard/simonmyway.com).
 
