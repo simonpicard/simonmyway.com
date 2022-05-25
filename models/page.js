@@ -1,22 +1,18 @@
-const fs = require('fs');
-const path = require('path');
-const md = require('markdown-it')({
+const fs = require("fs");
+const path = require("path");
+const md = require("markdown-it")({
     html: true,
 });
 
 const pages_dir = path.join(
     path.dirname(require.main.filename),
-    'content',
-    'pages'
+    "content",
+    "pages"
 );
 
-const pages_path = path.join(
-    pages_dir,
-    'pages.json'
-);
+const pages_path = path.join(pages_dir, "pages.json");
 
-
-const get_pages_from_file = cb => {
+const get_pages_from_file = (cb) => {
     fs.readFile(pages_path, (err, file_content) => {
         if (err) {
             cb([]);
@@ -34,10 +30,10 @@ module.exports = class Page {
     }
 
     static find_by_slug(slug, cb) {
-        get_pages_from_file(pages => {
-            const page = pages.find(p => p.slug === slug);
+        get_pages_from_file((pages) => {
+            const page = pages.find((p) => p.slug === slug);
             const page_path = path.join(pages_dir, slug) + ".md";
-            fs.readFile(page_path, 'utf8', (err, file_content) => {
+            fs.readFile(page_path, "utf8", (err, file_content) => {
                 if (err) {
                     cb(false);
                 } else {
@@ -49,7 +45,7 @@ module.exports = class Page {
     }
 
     static find_all_headers(cb) {
-        get_pages_from_file(pages => {
+        get_pages_from_file((pages) => {
             cb(pages);
         });
     }

@@ -1,29 +1,29 @@
-const path = require('path');
+const path = require("path");
 
-const express = require('express');
-const helmet = require('helmet');
-const compression = require('compression');
+const express = require("express");
+const helmet = require("helmet");
+const compression = require("compression");
 
 const app = express();
 
-app.set('view engine', 'ejs');
-app.set('views', 'views');
+app.set("view engine", "ejs");
+app.set("views", "views");
 
-const main_routes = require('./routes/main');
+const main_routes = require("./routes/main");
 
 app.use(
     helmet({
         contentSecurityPolicy: {
             directives: {
                 "img-src": ["'self'", "data:", "https:"],
-            }
+            },
         },
     })
 );
 
 app.use(compression());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(main_routes);
 
