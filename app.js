@@ -3,6 +3,7 @@ const path = require("path");
 const express = require("express");
 const helmet = require("helmet");
 const compression = require("compression");
+const express_enforces_ssl = require("express-enforces-ssl");
 
 const app = express();
 
@@ -21,6 +22,14 @@ app.use(
     })
 );
 
+const sixMonthsInSeconds = 15768000;
+
+if (process.env.NODE_ENV != "development") {
+    console.log("Enabling SSL");
+
+    app.use(helmet.hsts({ maxAge: sixMonthsInSeconds }));
+    app.use(express_enforces_ssl());
+}
 app.use(compression());
 
 app.use(express.static(path.join(__dirname, "public")));
