@@ -57,9 +57,9 @@ I recently passed the 1000 km mark on my new bike and as I have been cycling alm
 
 ### Gear yourself for bad weather
 
-I biked the whole winter and enjoyed it, you just need to get the equipment. It's the same for resort skiing, you would not enjoy it without feeling warm and dry. So what do you need? First and foremost are a rain jacket __and pant__. Any kind will do, in Europe you'll find cheap options at [_Decathlon_](https://www.decathlon.com/).
+I biked the whole winter and enjoyed it, you just need to get the equipment. It's the same for resort skiing, you would not enjoy it without feeling warm and dry. So what do you need? First and foremost are a rain jacket __and pants__. Any kind will do, in Europe you'll find cheap options at [_Decathlon_](https://www.decathlon.com/).
 
-Then I recommend merino gloves and legging. The gloves will prevent your hand from freezing due to the wind, the legging will keep your legs warm outdoor and fresh indoor, thanks to the magic properties of merino. I get my merino from [_IceBreaker_](https://www.icebreaker.com/) because that is what _Mike Horn_ uses and what _Reddit_ recommended. 
+Then I recommend merino gloves and legging. The gloves will prevent your hands from freezing due to the wind, the legging will keep your legs warm outdoor and fresh indoor, thanks to the magic properties of merino. I get my merino from [_IceBreaker_](https://www.icebreaker.com/) because that is what _Mike Horn_ uses and what _Reddit_ recommended. 
 
 You also want to get a pair of waterproof gloves, on top of your merino's when it's raining. And last but not least, a windshield, because, getting 25kph droplets in the eyes makes driving difficult. Your windshield can either be a pair of large frame glass or a cap.
 
