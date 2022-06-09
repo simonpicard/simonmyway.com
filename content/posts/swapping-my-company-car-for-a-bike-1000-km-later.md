@@ -46,7 +46,7 @@ I started by checking out this outlet occasionally, but soon realized that I sho
 
 I developed this whole script in _Python_ and deployed on _Google Cloud Platform_ using _Cloud Functions, Storage, Pub Sub_ and _Scheduler_, [the code is open source](https://github.com/simonpicard/canyon-outlet-monitor).
 
-After a couple of weeks, my dream _Canyon_ bicycle was still too expensive, even discounted up to 10%. You can check out all the bikes on sales I scrapped in [this CSV table](https://github.com/simonpicard/canyon-outlet-monitor/blob/main/data/canyon_monitor_bikes.csv) if you want to make some stats. Hence, I changed my tune by looking at other bike brands. I learned about [_Cube_](https://www.cube.eu/), apparently having a strong quality to price ratio, partially due to a low marketing spending, like _OnePlus_ back in the days. Their [_Touring Hybrid One 400_](https://www.cube.eu/2022/e-bikes/city-tour/on-road/touring-hybrid/cube-touring-hybrid-one-400-greynblue/) checked all the boxes, including the cost! 
+After a couple of weeks, my dream _Canyon_ bicycle was still too expensive, even discounted up to 10%. You can check out all the bikes on sale I scrapped in [this CSV table](https://github.com/simonpicard/canyon-outlet-monitor/blob/main/data/canyon_monitor_bikes.csv) if you want to make some stats. Hence, I changed my tune by looking at other bike brands. I learned about [_Cube_](https://www.cube.eu/), apparently having a strong quality to price ratio, partially due to a low marketing spending, like _OnePlus_ back in the days. Their [_Touring Hybrid One 400_](https://www.cube.eu/2022/e-bikes/city-tour/on-road/touring-hybrid/cube-touring-hybrid-one-400-greynblue/) checked all the boxes, including the cost! 
 
 
 ## 1000 km later
