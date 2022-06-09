@@ -3,5 +3,11 @@
         "slug": "i-have-been-coding-for-more-than-15-years-but-never-in-javascript",
         "title": "I have been coding for more than 15 years, but never in JavaScript",
         "date": "2022-05-21"
+    },
+    {
+        "slug": "swapping-my-company-car-for-a-bike-1000-km-later",
+        "title": "Swapping my company car for a bike, 1000 km later",
+        "date": "2022-06-08",
+        "img": "img/posts/ebike-1000-km.jpg"
     }
 ]

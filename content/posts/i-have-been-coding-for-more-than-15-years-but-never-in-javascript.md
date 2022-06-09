@@ -3,7 +3,7 @@
 As a long time computer scientist, I know that the field has many topics to offer. I started my journey back when I was starting my secondary education, i.e. when I was about 12 years old, by learning how to code in `C++`, following an online tutorial on [OpenClassooms](https://openclassrooms.com/en/), formerly known as "_le SiteDuZero_".
 
 Back then, I was just trying to create some games after a friend told me he had developed an in-terminal app where the user has to guess a magic number. It worked as follows:
-1. The computer generate a random number, the magic number
+1. The computer generates a random number, the magic number
 1. The user types a number as a guess
 1. The computer tells if the magic number is above or below the current guess
 1. Repeat `2` and `3` until the user finds the magic number

@@ -45,6 +45,19 @@ module.exports = class Post {
                     const doc = new jsdom.JSDOM(post.content);
                     post.description =
                         doc.window.document.querySelector("p").textContent;
+
+                    if (!post.img) {
+                        const first_img =
+                            doc.window.document.querySelector("img");
+                        if (first_img) {
+                            post.img = first_img
+                                .getAttribute("src")
+                                .substring(1);
+                            //remove first backslash
+                        } else {
+                            post.img = null;
+                        }
+                    }
                     cb(post);
                 }
             });
@@ -53,6 +66,9 @@ module.exports = class Post {
 
     static find_all_headers(cb) {
         get_posts_from_file((posts) => {
+            posts = posts.sort((first, second) => {
+                return new Date(second.date) - new Date(first.date);
+            });
             cb(posts);
         });
     }

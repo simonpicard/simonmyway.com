@@ -19,6 +19,7 @@ exports.get_page = (req, res, next) => {
                 page: page,
                 pages: pages,
                 relative_path: `${page_slug}`,
+                img: null,
             });
         });
     });
@@ -34,6 +35,7 @@ exports.get_index = (req, res, next) => {
                 posts: posts,
                 pages: pages,
                 relative_path: "",
+                img: null,
             });
         });
     });
@@ -56,6 +58,7 @@ exports.get_post = (req, res, next) => {
                 post: post,
                 pages: pages,
                 relative_path: `blog/${post_slug}`,
+                img: post.img,
             });
         });
     });
@@ -70,6 +73,7 @@ exports.get_videos = (req, res, next) => {
                 videos: videos,
                 pages: pages,
                 relative_path: "videos",
+                img: null,
             });
         });
     });

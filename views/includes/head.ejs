@@ -21,7 +21,11 @@
     <meta property="og:title" content="<%= title %>" />
     <meta property="og:url" content="<%= process.env.BASE_URL %><%= relative_path %>" />
     <meta property="og:description" content="<%= description %>" />
+    <% if(img !== null){ %>
+    <meta property="og:image" content="<%= process.env.BASE_URL %><%= img %>" />
+    <% } else { %>
     <meta property="og:image" content="<%= process.env.BASE_URL %>img/simonmyway-og.png" />
+    <% } %>
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="Simon Myway" />
@@ -29,7 +33,11 @@
     <meta name="twitter:url" content="<%= process.env.BASE_URL %><%= relative_path %>" />
     <meta name="twitter:title" content="<%= title %>" />
     <meta name="twitter:description" content="<%= description %>" />
-    <meta name="twitter:image" content="<%= process.env.BASE_URL %>img/simonmyway-square.png" />
+    <% if(img !== null){ %>
+    <meta property="twitter:image" content="<%= process.env.BASE_URL %><%= img %>" />
+    <% } else { %>
+    <meta property="twitter:image" content="<%= process.env.BASE_URL %>img/simonmyway-square.png" />
+    <% } %>
 
     <script type="application/ld+json">
         {
@@ -38,7 +46,9 @@
             "name": "<%= title %>",
             "url": "<%= process.env.BASE_URL %><%= relative_path %>",
             "description": "<%= description %>",
-            "image": "<%= process.env.BASE_URL %>img/simonmyway-og.png"
+            <% if(img !== null){ %> "image": "<%= process.env.BASE_URL %><%= img %>"
+            <% } else { %> "image": "<%= process.env.BASE_URL %>img/simonmyway-og.png"
+            <% } %>
 
         }
     </script>
