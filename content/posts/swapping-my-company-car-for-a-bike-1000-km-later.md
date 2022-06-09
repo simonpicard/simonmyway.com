@@ -57,7 +57,11 @@ I recently passed the 1000 km mark on my new bike and as I have been cycling alm
 
 ### Gear yourself for bad weather
 
-I biked the whole winter and enjoyed it, you just need to get the equipment. It's the same for resort skiing, you would not enjoy it without feeling warm and dry. So what do you need? First and foremost are a rain jacket __and pant__. Any kind will do, in Europe you'll find cheap options at [_Decathlon_](https://www.decathlon.com/). Then I recommend merino gloves and legging. The gloves will prevent your hand from freezing due to the wind, the legging will keep your legs warm outdoor and fresh indoor, thanks to the magic properties of merino. I get my merino from [_IceBreaker_](https://www.icebreaker.com/) because that is what _Mike Horn_ uses and what _Reddit_ recommended. You also want to get a pair of waterproof gloves, on top of your merino's when it's raining. And last but not least, a windshield, because, getting 25kph droplets in the eyes makes driving difficult. Your windshield can either be a pair of large frame glass or a cap.
+I biked the whole winter and enjoyed it, you just need to get the equipment. It's the same for resort skiing, you would not enjoy it without feeling warm and dry. So what do you need? First and foremost are a rain jacket __and pant__. Any kind will do, in Europe you'll find cheap options at [_Decathlon_](https://www.decathlon.com/).
+
+Then I recommend merino gloves and legging. The gloves will prevent your hand from freezing due to the wind, the legging will keep your legs warm outdoor and fresh indoor, thanks to the magic properties of merino. I get my merino from [_IceBreaker_](https://www.icebreaker.com/) because that is what _Mike Horn_ uses and what _Reddit_ recommended. 
+
+You also want to get a pair of waterproof gloves, on top of your merino's when it's raining. And last but not least, a windshield, because, getting 25kph droplets in the eyes makes driving difficult. Your windshield can either be a pair of large frame glass or a cap.
 
 ### Get a bike theft insurance
 
@@ -67,10 +71,14 @@ However, make sure to read the conditions which applies for the insurance. I was
 
 ### Biking makes micro traveling nicer
 
-Since getting my e-bike, I have been making many more commutes with it. I used to rent free-floating e-bikes for some journeys, but the use cases were limited. Free floating options are nice but will often be slightly unadapted, e.g. with some minor but annoying mechanical issues. As I selected just the right bike for me, this restriction went away, and boosted my usage. Today, I confirm it, traveling 25 min by bike is nice, 25 min by car is okayish, 25 min by public transportation is annoying. I think I am particularly averse to public transports because I get motion sickness in buses, if I could read a good book while in the metro, I guess it would be another story.
+Since getting my e-bike, I have been making many more commutes with it. I used to rent free-floating e-bikes for some journeys, but the use cases were limited. Free floating options are nice but will often be slightly unadapted, e.g. with some minor but annoying mechanical issues. As I selected just the right bike for me, this restriction went away, and boosted my usage.
+
+Today, I confirm it, traveling 25 min by bike is nice, 25 min by car is okayish, 25 min by public transportation is annoying. I think I am particularly averse to public transports because I get motion sickness in buses, if I could read a good book while in the metro, I guess it would be another story.
 
 ### If you feel unsafe, you are
 
-Road sharing is still a work in progress, at least in Brussels. Some drivers are careful, others are not. Therefore, if you think you're at risk of accident, then you are. To cope with this, make sure to apply the traffic regulations, yes that means yielding priority to cars even if you are going full speed downhill or struggling uphill. On the other hand, do take your priorities and do not be afraid to take some space, you are not supposed to stick to parked card, especially if the road is in bad state there. Thankfully, biking infrastructure is getting better in major European cities, but never underestimate lack of knowledge, distraction or bad will from car drivers. Always be ready to protect yourself, e.g. by braking if a car suddenly turns and cut your path. Although you have the priority, it is better to brake than crash. Hope for the best, prepare for the worst.
+Road sharing is still a work in progress, at least in Brussels. Some drivers are careful, others are not. Therefore, if you think you're at risk of accident, then you are. To cope with this, make sure to apply the traffic regulations, yes that means yielding priority to cars even if you are going full speed downhill or struggling uphill. On the other hand, do take your priorities and do not be afraid to take some space, you are not supposed to stick to parked card, especially if the road is in bad state there.
+
+Thankfully, biking infrastructure is getting better in major European cities, but never underestimate lack of knowledge, distraction or bad will from car drivers. Always be ready to protect yourself, e.g. by braking if a car suddenly turns and cut your path. Although you have the priority, it is better to brake than crash. Hope for the best, prepare for the worst.
 
 Thanks for reading and see you soon, e.g. at the next [Critical Mass](http://www.critical-mass.be/) 🚴
