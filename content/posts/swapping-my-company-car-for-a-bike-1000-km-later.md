@@ -34,9 +34,9 @@ Opting for a bike as your main mobility mean is nice, but you still have a coupl
 - A removable battery, to allow charging it anywhere
 - A frame adjusted to my size
 
-With such requirements, trendy e-bikes such as [_Cowboy_](https://us.cowboy.com/) and [_VanMoof_](https://www.vanmoof.com/) were disqualified as they do not fit half of them. Bye-bye the startuper cliché, credit to [@loule.blou](https://www.instagram.com/loule.blou/).
+With such requirements, trendy e-bikes such as [_Cowboy_](https://us.cowboy.com/) and [_VanMoof_](https://www.vanmoof.com/) were disqualified as they do not fit half of them. Bye-bye the startuper cliché, credit to [@loule.blou](https://www.instagram.com/p/CRbBJa_lm66/).
 
-![A cliché about startuper using a Cowboy bike in the city](/img/posts/startupeur-cowboy-en.jpg) <!-- {.center} -->
+![A cliché about startuper using a Cowboy bike in the city from @loule.blou](/img/posts/startupeur-cowboy-en.jpg) <!-- {.center} -->
 
 I went ahead and investigated the [_Canyon_](https://www.canyon.com/) brand, which I had been eyeing for some time, especially the _Endurace_ model to get into weekend road cycling. For this everyday bike, the [_Pathlite_](https://www.canyon.com/en-be/electric-bikes/electric-touring-bikes/pathlite-on/) was ideal, except for its price which was above budget. Then I discovered an [outlet](https://www.canyon.com/en-be/outlet-bikes/) was available, selling discounted bikes due to minor imperfections. Problem, new bikes were added to the outlet sporadically, without notice...
 
