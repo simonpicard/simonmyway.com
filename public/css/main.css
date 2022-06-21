@@ -285,4 +285,8 @@ div.gallery img {
         gap: 2px;
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .navbar {
+        line-height: 48px;
+    }
 }
