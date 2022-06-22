@@ -11,6 +11,8 @@ router.get("/videos", main_controller.get_videos);
 
 router.use("/sitemap.xml", util_controller.get_sitemap);
 
+router.use("/feed.xml", util_controller.get_rss);
+
 router.get("/:page_slug", main_controller.get_page);
 
 router.use("/", main_controller.get_index);

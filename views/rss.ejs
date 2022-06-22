@@ -1,0 +1,30 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Simon Myway</title>
+    <link href="<%= process.env.BASE_URL %>" rel="alternate" />
+    <link href="<%= process.env.BASE_URL %>feed.xml" rel="self" />
+    <id><%= process.env.BASE_URL %></id>
+    <updated><%= updated %></updated>
+
+    <% for (let post of posts) { %>
+    <entry>
+
+        <title><%= post.title %></title>
+        <link href="<%= process.env.BASE_URL %>blog/<%= post.slug %>" rel="alternate" />
+        <published><%= post.date %></published>
+        <updated><%= post.lastmod %></updated>
+        <author>
+            <name>Simon Myway</name>
+        </author>
+        <category term="blog" />
+
+
+        <id>tag:www.simonmyway.com,<%= post.date %>:/blog/<%= post.slug %></id>
+
+        <summary><%= post.description %></summary>
+        <content type="html"><%= post.content %></content>
+        <% if(post.img !== null){ %>
+        <logo><%= process.env.BASE_URL %><%= post.img %></logo>
+        <% } %>
+    </entry>
+    <% } %>
+</feed>
