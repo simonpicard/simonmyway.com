@@ -1,19 +1,23 @@
 [
     {
         "slug": "",
-        "title": "Blog"
+        "title": "Blog",
+        "content_file": "content/posts/posts.json"
     },
     {
         "slug": "videos",
-        "title": "Videos"
+        "title": "Videos",
+        "content_file": "content/videos.json"
     },
     {
         "slug": "about",
         "title": "About",
-        "description": "About the author."
+        "description": "About the author.",
+        "content_file": "content/pages/about.md"
     },
     {
         "slug": "pdf/cv_picard_simon.pdf",
-        "title": "Resume"
+        "title": "Resume",
+        "content_file": "public/pdf/cv_picard_simon.pdf"
     }
 ]
