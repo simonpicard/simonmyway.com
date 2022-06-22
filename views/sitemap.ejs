@@ -3,17 +3,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <% for (let page of pages) { %>
-    <loc><%= process.env.BASE_URL %><%= page.slug %></loc>
-    <lastmod><%= page.lastmod %></lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <url>
+        <loc><%= process.env.BASE_URL %><%= page.slug %></loc>
+        <lastmod><%= page.lastmod %></lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
     <% } %>
 
     <% for (let post of posts) { %>
-    <loc><%= process.env.BASE_URL %><%= post.slug %></loc>
-    <lastmod><%= post.lastmod %></lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
+    <url>
+        <loc><%= process.env.BASE_URL %><%= post.slug %></loc>
+        <lastmod><%= post.lastmod %></lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
     <% } %>
 
 </urlset>
