@@ -9,5 +9,10 @@
         "title": "Swapping my company car for a bike, 1000 km later",
         "date": "2022-06-08",
         "img": "img/posts/ebike-1000-km.jpg"
+    },
+    {
+        "slug": "how-i-became-mckinsey-belgium-first-data-scientist",
+        "title": "How I became McKinsey Belgium's first Data Scientist",
+        "date": "2022-07-11"
     }
 ]
