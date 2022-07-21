@@ -40,7 +40,7 @@ A couple of traces of this interview still remain online, a [tweet](https://twit
 
 The text below was originally published in October 2018.
 
-### Why did you decide to participate in McKinsey Analytic’s November hackathon?
+### Why did you decide to participate in McKinsey Analytic’s March hackathon?
 
 It started when I received a message in my LinkedIn inbox. The mail was a solicitation to participate at a McKinsey Hackathon. It also said that this contest was taking place in the process of building the Advanced Analytics hub in the Benelux. The invitation was very appealing to me for two reasons:
 - I was very curious to discover how McKinsey is handling the analytics competences;
