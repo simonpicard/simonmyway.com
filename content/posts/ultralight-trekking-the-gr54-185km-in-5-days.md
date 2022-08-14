@@ -84,7 +84,7 @@ Désert-en-Valjouffrey - Bourg d'Arud: 25km 2170D+ 2521D-
 
 4:30a, I sneak out of the dormitory, trying not to wake up anyone. I usually pack my bag before sleeping so that I can leave the room smoothly, as soon as my alarm fires. For breakfast, I make coffee using a percolator, feels good after several instant coffee days. Today, I will follow the C part of the GR54C. It's an alternative path of the trek; basically it is 20km shorter for the same total elevation.
 
-5:30a, instead of heading toward Bourg-d'Oisans, I start hiking the Lac du Chambon, right next to Mizoën. To do so, I go around the Pied Moutet, a 2400 meters tall mountains, in the Les Deux Alpes skiing domain. On the way, there are several equipped sections, with small ladders and chains to facilitate some perilous paths. Nothing like the GR20 though, I almost never had to use my hands on this trek. The only exception was when hiking the Col de la Grangette on the first day, but which is actually not part of the GR54. Several kilometers later, I pass by an unmanned shelter. There is a small table and two beds. It would be really cool to spend a night there, maybe one day, when I'll do autonomous trekking.
+5:30a, instead of heading toward Bourg-d'Oisans, I start hiking to the Lac du Chambon, right next to Mizoën. To do so, I go around the Pied Moutet, a 2400 meters tall mountains, in the Les Deux Alpes skiing domain. On the way, there are several equipped sections, with small ladders and chains to facilitate some perilous paths. Nothing like the GR20 though, I almost never had to use my hands on this trek. The only exception was when hiking the Col de la Grangette on the first day, but which is actually not part of the GR54. Several kilometers later, I pass by an unmanned shelter. There is a small table and two beds. It would be really cool to spend a night there, maybe one day, when I'll do autonomous trekking.
 
 10a, I'm arriving on top the Lac du Chambon, it's huge! The water is sky blue and I can see some water sports happening on it. After a small section on the road, I cross the lake on its dam, it looks super high. I one shot a cola and a ice tea at Mizoën and head toward the Plateau d'Emparis, my final rise. On the way, I see that I can go check out a small lake, 
 Le Lovitel. But I see no lake, it is completely dry. Apparently, the whole massif is dry this year, it is usually way greener.
@@ -113,6 +113,8 @@ Should anyone have been inspired by my experience, you can find what was in my b
 | 4 | Désert-en-Valjouffrey | Bourg-d'Arud | 25,72 | 2170 | 2520 | 9:52 | 7:24 |  |
 | 5 | Bourg-d'Arud | La Grave | 41,17 | 2488 | 1962 | 12:36 | 10:04 | Via Mizoën (GR54C) |
 | **Total** |  |  | **185,91** | **11194** | **11352** | **58:32** | **45:30** |  |
+
+The moving is estimated from Strava.
 
 So... This was my third large trek, completed in 5 to 6 days. I plan to share the knowledge I acquired doing them, from preparation to day-to-day hiking. You can expect to find a new post about this some day.
 

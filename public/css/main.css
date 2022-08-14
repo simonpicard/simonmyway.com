@@ -227,6 +227,9 @@ div.gallery img {
 table {
     border-collapse: collapse;
     width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 tr {
@@ -235,6 +238,11 @@ tr {
 
 th {
     text-align: center;
+}
+
+th,
+td {
+    padding: 5px;
 }
 
 @media screen and (min-width: 1024px) {
