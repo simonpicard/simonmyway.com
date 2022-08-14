@@ -114,7 +114,7 @@ Should anyone have been inspired by my experience, you can find what was in my b
 | 5 | Bourg-d'Arud | La Grave | 41,17 | 2488 | 1962 | 12:36 | 10:04 | Via Mizoën (GR54C) |
 | **Total** |  |  | **185,91** | **11194** | **11352** | **58:32** | **45:30** |  |
 
-The moving is estimated from Strava.
+The moving time is estimated from Strava.
 
 So... This was my third large trek, completed in 5 to 6 days. I plan to share the knowledge I acquired doing them, from preparation to day-to-day hiking. You can expect to find a new post about this some day.
 
