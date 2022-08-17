@@ -42,7 +42,7 @@ Vallouise - Refuge de Vallonpierre: 37km 2826D+ 1697D-
 
 Half an hour later, I refill my water bottles and go. It's a steep downhill to the valley. The early lights make for a vivid landscape. There's a shelter midway. I notice a guy with a T-shirt colored to the Belgian flag. He and his friends are from Tournai. He tells me that the water here is not drinkable, good that I refilled.
 
-7a, I'm at 1000m, on my way to Villar-Lourbière. It's flat. For 12km. Next to a road. Yesterday during dinner, I meet a group of 4 friends, with trail running-ish style. Turns out they are wrapping the GR54 counterclockwise, in 5 days, bivouacking. Meaning carrying a tent and food, for about 12-15kg. Pretty impressive. Thus, they came the way I'm heading to. They decided to take a bus for this flat section. Should I also skip it hitchhiking? What about the alpine alternative going through l'Olan, that's not flat? And actually, will there be room for me this evening?
+7a, I'm at 1000m, on my way to Villar-Loubière. It's flat. For 12km. Next to a road. Yesterday during dinner, I meet a group of 4 friends, with trail running-ish style. Turns out they are wrapping the GR54 counterclockwise, in 5 days, bivouacking. Meaning carrying a tent and food, for about 12-15kg. Pretty impressive. Thus, they came the way I'm heading to. They decided to take a bus for this flat section. Should I also skip it hitchhiking? What about the alpine alternative going through l'Olan, that's not flat? And actually, will there be room for me this evening?
 
 As I understand that yolo-ing every decision on this trek is harder due to accommodation high demand, I decide to book a bed in a gite 3 steps later, with a total estimation of 13 hours. And what about the next day? And the day after? Well, at the end of day 3, I will be at end of step 9, on a total of 14. Wait, am I about to complete this trek in 5 days? 175km 11kD+? I don't know, but let's book as if. Alea jacta es.
 
@@ -52,7 +52,7 @@ Eventually, I decide to 1. not take a car, part of my drive for those hikes is t
 
 3p, it's time for downhill. 1300m downhill. The first 150 meters are extremely steep. I would have preferred to hike that uphill. Anyway, after some time, the dark scree become dirt with rocks. I could run down here, but I do not. I prefer to preserve my knees, I'll reach the shelter early enough anyway.
 
-7p, after settling in and doing a bit of clothes hand washing, the kind of thing normal hikers do every day when you don't arrive dinner-30 minutes, we start eating. It's a long table, with 16 plates. The guardian is a passionate cook and spent all the afternoon simmering sausages and rice. It's delicious. Those shelter dinners are always a nice time, everyone is so caring. The typical opener is "so you're the GR? When did you start?". At some point, I answer those questions, so... I'm 60% in and started 3 days ago. This morning I was at Vallonpierre. As I am talking, I notice more and more guests becoming silent and looking at me with big eyes. I share some tips and tricks on how to pack lightly, avoid injuries etc. Of course I know my way of hiking is a bit out there, but it is not crème de la crème either right? What I do in 5 days, Kilian, Lambert or Jim would do in 30 hours. To them I was still somehow extraordinary, everything is relative.
+7p, after settling in and doing a bit of clothes hand washing, the kind of thing normal hikers do every day when you don't arrive dinner-30 minutes, we start eating. It's a long table, with 16 plates. The guardian is a passionate cook and spent all the afternoon simmering sausages and rice. It's delicious. Those shelter dinners are always a nice time, everyone is so caring. The typical opener is "so you're on the GR? When did you start?". At some point, I answer those questions, so... I'm 60% in and started 3 days ago. This morning I was at Vallonpierre. As I am talking, I notice more and more guests becoming silent and looking at me with big eyes. I share some tips and tricks on how to pack lightly, avoid injuries etc. Of course I know my way of hiking is a bit out there, but it is not crème de la crème either right? What I do in 5 days, Kilian, Lambert or Jim would do in 30 hours. To them I was still somehow extraordinary, everything is relative.
 
 Refuge de Vallonpierre - Désert-en-Valjouffrey: 36km 1660D+ 2659D-
 
@@ -114,7 +114,7 @@ Should anyone have been inspired by my experience, you can find what was in my b
 | 5 | Bourg-d'Arud | La Grave | 41,17 | 2488 | 1962 | 12:36 | 10:04 | Via Mizoën (GR54C) |
 | **Total** |  |  | **185,91** | **11194** | **11352** | **58:32** | **45:30** |  |
 
-The moving time is estimated from Strava.
+The moving time is estimated by Strava.
 
 So... This was my third large trek, completed in 5 to 6 days. I plan to share the knowledge I acquired doing them, from preparation to day-to-day hiking. You can expect to find a new post about this some day.
 
