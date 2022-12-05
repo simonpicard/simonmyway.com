@@ -19,7 +19,7 @@ The league’s schedule is available on its website, so I could have just browse
 Hence, I opened my favorite editor and made a prototype to:
 
 1. Scrap the info on the website
-2. Combine them into a iCal file that I could import in my agenda
+2. Combine them into an iCal file that I could import in my agenda
 
 I quickly got a suitable result with Python and a couple of libraries. This tool started as a _Jupyter Notebook_ then moved to structured class and was just refactored in a data pipeline using _Kedro_. This project is [open sourced on GitHub](https://github.com/simonpicard/abssa-ical).
 
