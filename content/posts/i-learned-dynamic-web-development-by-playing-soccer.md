@@ -6,7 +6,7 @@ At university, I kept my fitness activity to fundamental exercise, which eventua
 
 ## Starting late
 
-Thus, I looked for soccer games and joined some via via. I realized that ball touch is difficult, and require practice. I would often contest with folks who had been playing for many years, typically back in high school, and bringing something to the team was… hard. Luckily, I had my cardio and strength to leverage. I also rehearsed some drills alone.
+Thus, I looked for soccer games and joined some via via. I realized that ball touch is difficult, and requires practice. I would often contest with folks who had been playing for many years, typically back in high school, and bringing something to the team was… hard. Luckily, I had my cardio and strength to leverage. I also rehearsed some drills alone.
 
 ![Practicing a rainbow](/img/posts/soccer-react/rainbow.gif) <!-- {.center} -->
 
