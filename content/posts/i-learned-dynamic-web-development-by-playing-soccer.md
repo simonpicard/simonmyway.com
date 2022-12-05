@@ -1,4 +1,4 @@
-# I learned dynamic Web Development by playing Soccer
+# I learned Dynamic Web Development by playing Soccer
 
 Sports-wise, I am a late bloomer. Indeed, I started to practice regularly when I was about 16 years old. I use to just not enjoy it, and I cannot blame my parents as they tried to enroll me in many occupations such as soccer, rock-climbing, table tennis and fencing. Anyhow, I now appreciate athletics a lot, I began my journey by getting in shape with weightlifting, then endurance training, i.e., jogging. Retrospectively, I commenced to love physical activity when I acquired a minimal fitness level, which was somewhat awkward to land. As a kid, I did not push my comfort zone too much.
 
