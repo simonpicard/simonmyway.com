@@ -8,7 +8,7 @@ At university, I kept my fitness activity to fundamental exercise, which eventua
 
 Thus, I looked for soccer games and joined some via via. I realized that ball touch is difficult, and requires practice. I would often contest with folks who had been playing for many years, typically back in high school, and bringing something to the team was… hard. Luckily, I had my cardio and strength to leverage. I also rehearsed some drills alone.
 
-![Practicing a rainbow](/img/posts/soccer-react/rainbow.png) <!-- {.center} -->
+![Practicing a rainbow](/img/posts/soccer-react/rainbow.jpg) <!-- {.center} -->
 
 After a while, I wanted to join a club and I heard about a Brussels-based amateur league, called ABSSA, meaning _Belgian Association of Saturday Sports_. Eventually, I found a team to play with, and my immediate next step was to block all the games’ times in my calendar, so I would make sure to attend and not double book anything else.
 
