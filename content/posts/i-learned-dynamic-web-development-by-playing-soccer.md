@@ -1,39 +1,39 @@
 # I learned Dynamic Web Development by playing Soccer
 
-Sports-wise, I am a late bloomer. Indeed, I started to practice regularly when I was about 16 years old. I use to just not enjoy it, and I cannot blame my parents as they tried to enroll me in many occupations such as soccer, rock-climbing, table tennis and fencing. Anyhow, I now appreciate athletics a lot, I began my journey by getting in shape with weightlifting, then endurance training, i.e., jogging. Retrospectively, I commenced to love physical activity when I acquired a minimal fitness level, which was somewhat awkward to land. As a kid, I did not push my comfort zone too much.
+Sports-wise, I am a late bloomer. Indeed, I started practicing regularly when I was about 16 years old. I use to just not enjoy it, and I cannot blame my parents as they tried to enroll me in many occupations such as soccer, rock-climbing, table tennis and fencing. Anyhow, I now appreciate athletics a lot, I began my journey by getting in shape with weightlifting, then endurance training, i.e., jogging. Retrospectively, I commenced to love physical activity when I acquired a minimal fitness level, which was somewhat awkward to land. As a kid, I did not push my comfort zone too much.
 
-At university, I kept my fitness activity to fundamental exercise, which eventually led me to trail running, [as you may know](/blog/ultralight-trekking-the-gr54-185km-in-5-days). Upon saying goodbye to my student life, I looked into team sports. Soccer specifically, as I had been a fan for several years.
+At university, I kept my fitness activity to fundamental exercise, which eventually led me to trail running, [as you may know](/blog/ultralight-trekking-the-gr54-185km-in-5-days). Upon saying goodbye to my student life, I investigated team sports. Soccer specifically, as I had been a fan for several years.
 
 ## Starting late
 
 Thus, I looked for soccer games and joined some via via. I realized that ball touch is difficult, and requires practice. I would often contest with folks who had been playing for many years, typically back in high school, and bringing something to the team was… hard. Luckily, I had my cardio and strength to leverage. I also rehearsed some drills alone.
 
-![Practicing a rainbow](/img/posts/soccer-react/rainbow.gif) <!-- {.center} -->
+![Practicing a rainbow](/img/posts/soccer-react/rainbow.png) <!-- {.center} -->
 
-After a while, I wanted to join a club and I learned about a Brussels-based amateur league, named ABSSA, meaning _Belgian Association of Saturday Sports_. Eventually, I found a team to play with, and my immediate response was to block all the games’ times in my calendar, so I would make sure to attend and not double book anything else.
+After a while, I wanted to join a club and I heard about a Brussels-based amateur league, called ABSSA, meaning _Belgian Association of Saturday Sports_. Eventually, I found a team to play with, and my immediate next step was to block all the games’ times in my calendar, so I would make sure to attend and not double book anything else.
 
 ## Scraping ABSSA’s website
 
-The league’s schedule is available on its website, so I could have just browsed it to log all my games but why do it manually when you can automate it? Playing a bit with the inspect tool of my navigator, I noticed that the internet site would probably be scrapable, i.e., its information is extractable. I also noted that to have all the data about a specific match, I would need to visit several pages, one for the game time, one for the field name, and another one for the field location. Something annoying to do manually but simple to code.
+The league’s schedule is available on its website, so I could have just browsed it to log all my games but why do it manually when you can automate it? Playing a bit with the inspect tool of my navigator, I noticed that the internet site is scrapable, i.e., its information is extractable. I also noted that to have all the data about a specific match, I would need to visit several pages, one for the game time, one for the field name, and another one for the field location. Something annoying to do manually but simple to code.
 
 Hence, I opened my favorite editor and made a prototype to:
 
 1. Scrap the info on the website
-2. Combine them into an iCal file that I could import in my agenda
+2. Combine them into an _iCal_ file that I could import in my agenda
 
 I quickly got a suitable result with Python and a couple of libraries. This tool started as a _Jupyter Notebook_ then moved to structured classes and was just refactored in a data pipeline using _Kedro_. This project is [open sourced on GitHub](https://github.com/simonpicard/abssa-ical).
 
 ## Publishing those calendars
 
-The cool thing with automating a process is that it is scalable. I had developed that calendar maker for my team, yet I could now also generate the schedules for every single team, as the logic was the same. And there are 258 of them. How should I make those calendars available to anyone? I could share a drive folder with all the iCal files but the user experience would not be great and it would limit its reach to minimal tech-savvy players.
+The advantage of automating a process is that it is scalable. I had developed that calendar maker for my team, yet I could now also generate the schedules for every single team, as the logic was the same. And there are 258 of them. How should I make those calendars available to everyone? I could share a drive folder with all the _iCal_ files but the user experience would not be great and it would limit its reach to minimally tech-savvy players.
 
-What if I build a simple website where a user would search for its team, see all its fixtures and have the option to add the schedule to its agenda? Hmm.. Should I develop it, it would look something like this…
+What if I build a simple website where a user would search for its team, see all its fixtures and have the option to save them in its agenda? Hmm.. Should I develop it, it would look something like this…
 
 ![An early sketch of calabssa](/img/posts/soccer-react/calabssa-sketch.png) <!-- {.center} -->
 
 ## Project based learning
 
-As I shared in [my very first blog post](/blog/i-have-been-coding-for-more-than-15-years-but-never-in-javascript), I decided to get into web development, to add such new string to my bow. This personal blog is an initial step into this direction, but it is fully static, meaning that its content will always be the same, regardless of the action you do on it. For my calendar sharing app, I would like the search bar to have an autocomplete function. Its suggestions will obviously depend on what the user types in it. Thus, a static website is not preferred, and it is the occasion for me to learn a new tech!
+As I shared in [my very first blog post](/blog/i-have-been-coding-for-more-than-15-years-but-never-in-javascript), I decided to get into web development, to add such new string to my bow. This personal blog is an initial step into this direction, but it is fully static, meaning that its pages' content will always be the same, regardless of the action you do on it. For my calendar sharing app, I would like the search bar to have an autocomplete function. Its suggestions will depend on what the user types in it. Thus, a static website is not the way, and it is the occasion for me to learn a new tech!
 
 I am about to create a web app with _client side rendering_ using _JavaScript_. Different frameworks exist for such need, and your first call is to select the one you will apply. I like to make my decisions data driven and, luckily for me, there are large surveys being rolled out on _JavaScript_ technologies by the [State of _JavaScript_](https://stateofjs.com/en-us/). Let’s look at the latest results for front-end frameworks:
 
@@ -57,7 +57,7 @@ I started by sharing my web development effort but it was pretty hard to explain
 
 ## Lessons learned
 
-Developing website is exciting as you get a direct feedback. Indeed, as soon as you hit save on your editor, you will see your web page update itself and view its result live. This is very different from data projects, my main skill. For those, the outcomes of your work are typically less tangible as they are more research oriented. You will end up with a number, which could have a big impact on your business eventually, but it’s not a live web app where each line leads to a specific element on it.
+Developing websites is exciting as you get a direct feedback. Indeed, as soon as you hit save on your editor, you will see your web page update itself and view its result live. This is very different from data projects, my main skill. For those, the outcomes of your work are typically less tangible as they are more research oriented. You will end up with a number, which could have a big impact on your business eventually, but it’s not a live web app where each line leads to a specific element on it.
 
 For this project, I employed _React_ with _Tailwind_ to handle the page layout, the former managing the _JavaScript_ and the latter the _CSS_. The development experience was nice because a single file contains all the components of a web page, i.e., _HTML_, _CSS_ and _JavaScript_. Hence, it is convenient as you do not need to modify multiple files to rework a page. This is different from the approach I used for this personal blog, where I rely on _Express_ and _EJS_ and have to deal with them in separate files.
 
