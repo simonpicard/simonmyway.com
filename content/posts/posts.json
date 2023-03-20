@@ -25,5 +25,10 @@
         "title": "I learned Dynamic Web Development by playing Soccer",
         "date": "2022-12-04",
         "img": "/img/posts/soccer-react/rainbow.jpg"
+    },
+    {
+        "slug": "so-you-want-to-trail-run",
+        "title": "So you want to Trail Run?",
+        "date": "2023-03-20"
     }
 ]
