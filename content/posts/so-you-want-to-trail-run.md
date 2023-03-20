@@ -87,7 +87,7 @@ Then, here are some more practical tips:
 -   Carry mixed nuts with you for snacks. Get sweet and salted mix
 -   Red tiger's balm will help your muscle recovery
 
-![GR54 stages plan](/img/posts/trail-running-how-to/gtfpc_backpack.jpg) <!-- {.center} -->
+![What was in my backpack](/img/posts/trail-running-how-to/gtfpc_backpack.jpg) <!-- {.center} -->
 
 If you're interested in specific brands and models, check out [what was in the backpack](https://lighterpack.com/r/yeawl8) of my latest trip.
 
@@ -99,7 +99,7 @@ Hiking requires more than just physical endurance; it also demands a functional 
 
 For reference, here's a look at my own 6-months volume of walking and running over the years.
 
-![GR54 stages plan](/img/posts/trail-running-how-to/running_mileage.png) <!-- {.center} -->
+![6-months volume of walking and running chart](/img/posts/trail-running-how-to/running_mileage.png) <!-- {.center} -->
 
 I began running somewhat regularly in 2013 and ran my first ever 10km in 1 hours and 7 minutes back then. Unfortunately, I could not find my tracking data for that period. The above chart is based on _Strava_ data, which I started using in 2019.
 
