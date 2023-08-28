@@ -72,7 +72,7 @@ That's exactly what I built.
 
 By harnessing the power of Artificial Intelligence, I have made it possible for users to enter descriptions into [Urbanex](https://urbanex.be) and filter results based on their particular needs. Let's say you plan to construct a swimming pool in your backyard; with Urbanex, you can check how many similar projects have been accepted or rejected close to your place. This feature provides a better understanding of the feasibility of your project, potentially saving time and effort during your permit application process.
 
-# An ocean of opportunities
+## An ocean of opportunities
 
 The journey of creating [Urbanex](https://urbanex.be) has been a thrilling one. For me, it is again the opportunity to practice web development, using Next.js this time! Eventually, allowing me to create the interface between AI tools and the user. I have many more ideas about how else AI can bring value to this permit planning, I even aspire to, some day, craft a tool that can forecast permit approval outcomes.
 
