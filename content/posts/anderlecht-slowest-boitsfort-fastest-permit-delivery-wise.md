@@ -4,7 +4,7 @@ During last spring, I had the incredible opportunity to attend the London based 
 
 ![Simon at EF](/img/posts/anderlecht-slowest-boitsfort-fastest-permit-delivery-wise/ef_simon.png) <!-- {.center} -->
 
-After spending four months in the incubator, I found myself on an unexpected path. Despite my exhaustive search, I couldn't find the right co-founder to align with my vision. Hence, I made the choice to return to Brussels. After intensive customer development, brainstorming and idea-discussions, I wanted to feel pragmatic productivity and build something tangible.
+After spending three months in the incubator, I found myself on an unexpected path. Despite my exhaustive attempts, I couldn't match with the right co-founder to share a common vision. Hence, I made the choice to return to Brussels. Following intensive customer development, brainstorming and idea-discussions, I wanted to feel pragmatic productivity and build something tangible.
 
 I directed my energy to a subject that had intrigued me for a long time: the Brussels' real estate landscape, primarily due to my involvement in multiple related projects. Dealing with property in Brussels introduces one to the intricacies of urban planning. If you were to renovate a building, you'd have to secure an urbanism permit by presenting the project to the respective municipality for approval. It is fundamental to note that construction cannot commence without possessing this permit.
 
