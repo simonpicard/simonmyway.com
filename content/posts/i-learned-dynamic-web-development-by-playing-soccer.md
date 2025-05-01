@@ -8,7 +8,7 @@ At university, I kept my fitness activity to fundamental exercise, which eventua
 
 Thus, I looked for soccer games and joined some via via. I realized that ball touch is difficult, and requires practice. I would often contest with folks who had been playing for many years, typically back in high school, and bringing something to the team was… hard. Luckily, I had my cardio and strength to leverage. I also rehearsed some drills alone.
 
-![Practicing a rainbow](/img/posts/soccer-react/rainbow.jpg) <!-- {.center} -->
+![Practicing a rainbow](/img/posts/soccer-react/rainbow.jpg)
 
 After a while, I wanted to join a club and I heard about a Brussels-based amateur league, called ABSSA, meaning _Belgian Association of Saturday Sports_. Eventually, I found a team to play with, and my immediate next step was to block all the games’ times in my calendar, so I would make sure to attend and not double book anything else.
 
@@ -29,7 +29,7 @@ The advantage of automating a process is that it is scalable. I had developed th
 
 What if I build a simple website where a user would search for its team, see all its fixtures and have the option to save them in its agenda? Hmm.. Should I develop it, it would look something like this…
 
-![An early sketch of calabssa](/img/posts/soccer-react/calabssa-sketch.png) <!-- {.center} -->
+![An early sketch of calabssa](/img/posts/soccer-react/calabssa-sketch.png)
 
 ## Project based learning
 
@@ -37,13 +37,13 @@ As I shared in [my very first blog post](/blog/i-have-been-coding-for-more-than-
 
 I am about to create a web app with _client side rendering_ using _JavaScript_. Different frameworks exist for such need, and your first call is to select the one you will apply. I like to make my decisions data driven and, luckily for me, there are large surveys being rolled out on _JavaScript_ technologies by the [State of _JavaScript_](https://stateofjs.com/en-us/). Let’s look at the latest results for front-end frameworks:
 
-![Front-end framework satisfaction ranking](/img/posts/soccer-react/front_end_frameworks_experience_ranking.png) <!-- {.center} -->
+![Front-end framework satisfaction ranking](/img/posts/soccer-react/front_end_frameworks_experience_ranking.png)
 
 For my first front-end development experience, I would like to master a technology which is standard and well appreciated. Filtering out _Solid_ and _Svelte_ which are too recent, _React_ is ranking top.
 
 Hence, I went on and learned _React_. I started by its [tutorial](https://reactjs.org/tutorial/tutorial.html) then dived straight into trying to create my project. A week later, I am happy to share my very first dynamic web app: [calabssa.be](https://calabssa.be/?ref=simonmyway).
 
-![CalABSSA screenshot](/img/posts/soccer-react/calabssa.png) <!-- {.center} -->
+![CalABSSA screenshot](/img/posts/soccer-react/calabssa.png)
 
 Looks pretty much like the original design, right? Check the code on [GitHub](https://github.com/simonpicard/calabssa.be).
 
@@ -53,7 +53,7 @@ While embarking on my _React_ apprenticeship, I reckoned that it would be cool t
 
 I started by sharing my web development effort but it was pretty hard to explain what I was doing while deeply focusing on understanding the new technology. Once I landed a first working prototype for my web app, I went back to the calendar creation to improve it. I fully streamed refactoring it to a _Kedro_ pipeline, and the cool thing with lives is that you get a replay, which I combined and published on YouTube:
 
-[![Sustainable data pipeline development](/img/posts/soccer-react/kedro_min-overlay.png)](https://www.youtube.com/watch?v=uJE9NGaU_pk)<!-- {.center} -->
+[![Sustainable data pipeline development](/img/posts/soccer-react/kedro_min-overlay.png)](https://www.youtube.com/watch?v=uJE9NGaU_pk)
 
 ## Lessons learned
 

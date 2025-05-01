@@ -22,9 +22,9 @@ As I was cruising within my _Google Cloud_ Data Scientist role, for about half a
 
 Of course I accepted. At the time I was casually active on [_Kaggle_](https://www.kaggle.com/), thus aware of the kind of contest I could expect. I was looking forward to being part of such an in-person, _Kaggle_ like, competition. Moreover, during my Spanish stint, I had heard of the great place that McKinsey is, and how it could give me access to even better and unique opportunities.
 
-Couple weeks later, I joined the event with another 100 participants and ... I won first prize! 
+Couple weeks later, I joined the event with another 100 participants and ... I won first prize!
 
-![Winning the McKinsey datathon](/img/posts/datathon-first.jpg) <!-- {.center} -->
+![Winning the McKinsey datathon](/img/posts/datathon-first.jpg)
 
 I was so excited about the win that, on my way home, I punctured a tire of my car, because I was on the phone and not focused enough on the road - ahah.
 
@@ -36,16 +36,17 @@ I pursued the recruitment procedure, and ended up getting an offer. Back then I 
 
 A couple of traces of this interview still remain online, a [tweet](https://twitter.com/mckinsey/status/1049965148398587905) and an [Instagram post](https://www.instagram.com/p/BowX_7PiIqb/). On the other hand, the direct link to it is not active anymore.
 
-![Social media post about my interview for McKinsey](/img/posts/mck-itw-sm.jpg) <!-- {.center} -->
+![Social media post about my interview for McKinsey](/img/posts/mck-itw-sm.jpg)
 
 The text below was originally published in October 2018.
 
 ### Why did you decide to participate in McKinsey Analytic’s March hackathon?
 
 It started when I received a message in my LinkedIn inbox. The mail was a solicitation to participate at a McKinsey Hackathon. It also said that this contest was taking place in the process of building the Advanced Analytics hub in the Benelux. The invitation was very appealing to me for two reasons:
+
 - I was very curious to discover how McKinsey is handling the analytics competences;
 - I love to work on Data Science problems, for me it is similar to solving a brainteaser or an enigma.
-Thus, I decided to apply for the event and, a few days later, received a confirmation. 
+  Thus, I decided to apply for the event and, a few days later, received a confirmation.
 
 ### What was the most fun and interesting part of the hackathon? (actual Data Science Challenge)
 
@@ -75,15 +76,16 @@ During the event, I liked to discuss with employees from McKinsey. After the com
 
 My preparation was a day-to-day effort. Being a hired Data Scientist, I expected the hackathon to require similar competences as the one I practice in my daily activities.
 In order to put all the chances on my side, I focused my learning in three areas:
+
 - I made sure to keep up to date with the latest algorithms in Data Science;
 - I put an emphasis on being proficient with data wrangling and preparation;
-- I went over a few Kaggle competitions to have an idea about the different types of challenges that exist in Data Science and to look for best practice. 
+- I went over a few Kaggle competitions to have an idea about the different types of challenges that exist in Data Science and to look for best practice.
 
 ### What would you suggest to future McK hackathon participants?
 
 For the hackathon I attended, efficiency was the key of my win. Indeed, the length of the challenge was limited to four hours. Thus, we could not afford to lose any time. My recommendation would then be to master your basics. One should be quick at identifying the type of algorithm one is going to use. For this, make sure to take into account the goal of the task (classification, clustering, …) and the type of data (image, tabular, …). Be also prepared to deal with some data engineering and cleaning. For example, if you decide to work with Python, as I do, be ready to wrangle data with Pandas.
 
-The goal is for you to have the time to try different models and work on feature engineering. 
+The goal is for you to have the time to try different models and work on feature engineering.
 
 ## Final thoughts
 

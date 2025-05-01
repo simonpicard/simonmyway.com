@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-base text-base leading-body text-dark-secondary bg-dark-background;
+  }
+}
+
+@layer components {
+  .text-rendering-optimizeLegibility {
+    text-rendering: optimizeLegibility;
+  }
+} 

@@ -4,7 +4,7 @@ I have been trekking for several years now, below is a short diary of my latest 
 
 ## Day 1
 
-![Eychauda's Lake](/img/posts/gr54/day_1.jpg) <!-- {.center} -->
+![Eychauda's Lake](/img/posts/gr54/day_1.jpg)
 
 Though night, difficult to wake up, slightly nauseated. I get up at 4:30 am and leave at 5:15 am without eating, I have 3 hours planned to the refuge 500m higher. I start with the headlamp. I end up having my first feeling of middle mountains, but I am exhausted. Sometimes I close my eyes in spite of myself.
 
@@ -16,7 +16,7 @@ Villar-d'Arêne - Vallouise: 45km 2050D+ 2515D-
 
 ## Day 2
 
-![Sheeps and dog shepherd](/img/posts/gr54/day_2.jpg) <!-- {.center} -->
+![Sheeps and dog shepherd](/img/posts/gr54/day_2.jpg)
 
 The night was short once again, for some reason I cannot find good sleep. 4:30a I wake up and eat some stuff I bought at the grocery store, as I was staying in a town.
 
@@ -34,7 +34,7 @@ Vallouise - Refuge de Vallonpierre: 37km 2826D+ 1697D-
 
 ## Day 3
 
-![On the Col the la Muzelle](/img/posts/gr54/day_3.jpg) <!-- {.center} -->
+![On the Col the la Muzelle](/img/posts/gr54/day_3.jpg)
 
 4:30a, finally a good night of sleep! Is it related to the friendly dinner yesterday? The fresh air breathed from the tent? The awesome location at 2200m? Most likely all of the above.
 
@@ -58,7 +58,7 @@ Refuge de Vallonpierre - Désert-en-Valjouffrey: 36km 1660D+ 2659D-
 
 ## Day 4
 
-![Early morning mountains](/img/posts/gr54/day_4.jpg) <!-- {.center} -->
+![Early morning mountains](/img/posts/gr54/day_4.jpg)
 
 5a, it's a solo breakfast today, the guardian left a small goodbye note, that's nice. Today is going to be a cool one. The plan is to reach Vénosc, two mountains away. 1000 meters up, 1000 meters down and repeat.
 
@@ -80,13 +80,13 @@ Désert-en-Valjouffrey - Bourg d'Arud: 25km 2170D+ 2521D-
 
 ## Day 5
 
-![Tourbière de la pisse](/img/posts/gr54/day_5.jpg) <!-- {.center} -->
+![Tourbière de la pisse](/img/posts/gr54/day_5.jpg)
 
 4:30a, I sneak out of the dormitory, trying not to wake up anyone. I usually pack my bag before sleeping so that I can leave the room smoothly, as soon as my alarm fires. For breakfast, I make coffee using a percolator, feels good after several instant coffee days. Today, I will follow the C part of the GR54C. It's an alternative path of the trek; basically it is 20km shorter for the same total elevation.
 
 5:30a, instead of heading toward Bourg-d'Oisans, I start hiking to the Lac du Chambon, right next to Mizoën. To do so, I go around the Pied Moutet, a 2400 meters tall mountains, in the Les Deux Alpes skiing domain. On the way, there are several equipped sections, with small ladders and chains to facilitate some perilous paths. Nothing like the GR20 though, I almost never had to use my hands on this trek. The only exception was when hiking the Col de la Grangette on the first day, but which is actually not part of the GR54. Several kilometers later, I pass by an unmanned shelter. There is a small table and two beds. It would be really cool to spend a night there, maybe one day, when I'll do autonomous trekking.
 
-10a, I'm arriving on top the Lac du Chambon, it's huge! The water is sky blue and I can see some water sports happening on it. After a small section on the road, I cross the lake on its dam, it looks super high. I one shot a cola and a ice tea at Mizoën and head toward the Plateau d'Emparis, my final rise. On the way, I see that I can go check out a small lake, 
+10a, I'm arriving on top the Lac du Chambon, it's huge! The water is sky blue and I can see some water sports happening on it. After a small section on the road, I cross the lake on its dam, it looks super high. I one shot a cola and a ice tea at Mizoën and head toward the Plateau d'Emparis, my final rise. On the way, I see that I can go check out a small lake,
 Le Lovitel. But I see no lake, it is completely dry. Apparently, the whole massif is dry this year, it is usually way greener.
 
 2 hours later, I make it to Les Clots shelter, although I am hungry, I decide not to have lunch here but higher up instead, to enjoy the height just one last time. On the way up, there is a waterfall, actually multiple coming from the same rocks. The way all the water flows is beautiful. On the southern side, I see two glaciers, their white coats are impressive.
@@ -105,14 +105,14 @@ Bourg d'Arud - La Grave: 41km 2488D+ 1962D-
 
 Should anyone have been inspired by my experience, you can find what was in my backpack [here](https://lighterpack.com/r/yeawl8) and my itinerary just below
 
-| **Day** | **From** | **To** | **Distance (km)** | **Ascent (m)** | **Descent (m)** | **Elapsed time (hh:mm)** | **Moving time (hh:mm)** | **Comment** |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Villar-d'Arène | Vallouise | 45,19 | 2050 | 2514 | 12:41 | 9:22 | Via le Col de la Grangette |
-| 2 | Vallouise | Vallonpierre Shelter | 37,37 | 2826 | 1697 | 12:23 | 9:57 |  |
-| 3 | Vallonpierre Shelter | Désert-en-Valjouffrey | 36,46 | 1660 | 2659 | 11:00 | 8:43 | Via Villar-Loubière |
-| 4 | Désert-en-Valjouffrey | Bourg-d'Arud | 25,72 | 2170 | 2520 | 9:52 | 7:24 |  |
-| 5 | Bourg-d'Arud | La Grave | 41,17 | 2488 | 1962 | 12:36 | 10:04 | Via Mizoën (GR54C) |
-| **Total** |  |  | **185,91** | **11194** | **11352** | **58:32** | **45:30** |  |
+| **Day**   | **From**              | **To**                | **Distance (km)** | **Ascent (m)** | **Descent (m)** | **Elapsed time (hh:mm)** | **Moving time (hh:mm)** | **Comment**                |
+| --------- | --------------------- | --------------------- | ----------------- | -------------- | --------------- | ------------------------ | ----------------------- | -------------------------- |
+| 1         | Villar-d'Arène        | Vallouise             | 45,19             | 2050           | 2514            | 12:41                    | 9:22                    | Via le Col de la Grangette |
+| 2         | Vallouise             | Vallonpierre Shelter  | 37,37             | 2826           | 1697            | 12:23                    | 9:57                    |                            |
+| 3         | Vallonpierre Shelter  | Désert-en-Valjouffrey | 36,46             | 1660           | 2659            | 11:00                    | 8:43                    | Via Villar-Loubière        |
+| 4         | Désert-en-Valjouffrey | Bourg-d'Arud          | 25,72             | 2170           | 2520            | 9:52                     | 7:24                    |                            |
+| 5         | Bourg-d'Arud          | La Grave              | 41,17             | 2488           | 1962            | 12:36                    | 10:04                   | Via Mizoën (GR54C)         |
+| **Total** |                       |                       | **185,91**        | **11194**      | **11352**       | **58:32**                | **45:30**               |                            |
 
 The moving time is estimated by Strava.
 

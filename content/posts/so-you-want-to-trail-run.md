@@ -2,13 +2,13 @@
 
 Over the last years, I picked up some experience in trail running. Or fastpacking. Or ultra-light trekking. Whatever you want to call it, I describe it as going on hike at a faster-than-normal pace. Indeed:
 
--   In 2020, [I hiked alone the GR20 in 6 days](https://www.youtube.com/watch?v=TsvvGoqfsj4), Corsica, France
--   In 2021, [I completed the Alta Via 2 in 6 days](https://www.youtube.com/watch?v=z__MWA05t6Y), Dolomites, Italy
--   In 2022, [I solo-toured the GR54 in 5 days](/blog/ultralight-trekking-the-gr54-185km-in-5-days), Massif des écrins, France
+- In 2020, [I hiked alone the GR20 in 6 days](https://www.youtube.com/watch?v=TsvvGoqfsj4), Corsica, France
+- In 2021, [I completed the Alta Via 2 in 6 days](https://www.youtube.com/watch?v=z__MWA05t6Y), Dolomites, Italy
+- In 2022, [I solo-toured the GR54 in 5 days](/blog/ultralight-trekking-the-gr54-185km-in-5-days), Massif des écrins, France
 
 Thus, in this post, I would like to share about my experience in this domain.
 
-![Simon Myway on the GTFPC](/img/posts/trail-running-how-to/gtfpc_pic.jpg) <!-- {.center} -->
+![Simon Myway on the GTFPC](/img/posts/trail-running-how-to/gtfpc_pic.jpg)
 
 ## Do what you enjoy
 
@@ -20,7 +20,7 @@ I noticed that the GR20 stages were typically planned for 3 to 6 hours with a to
 
 There is no right or wrong way to hike. If you prefer to spend the afternoon at the shelter to enjoy the view and connect with fellow trekkers, then go for it. If you want to complete a trek as fast as possible for the challenge, then that's okay too. As long as you take necessary precautions and avoid taking inconsiderate risks, you should do it your way and enjoy the experience.
 
-![Simon Myway on the GR20](/img/posts/trail-running-how-to/gr20_pic.jpg) <!-- {.center} -->
+![Simon Myway on the GR20](/img/posts/trail-running-how-to/gr20_pic.jpg)
 
 ## Planning ahead
 
@@ -30,8 +30,8 @@ When planning a trek, the first decision to make is which trek to go on. My advi
 
 Equally important is deciding how you intend to trek. There are two primary considerations:
 
--   Will you carry a tent, or will you sleep in shelters?
--   Will you bring your own food and stove, or will you eat in shelters and resupply daily?
+- Will you carry a tent, or will you sleep in shelters?
+- Will you bring your own food and stove, or will you eat in shelters and resupply daily?
 
 These decisions will affect the size and weight of your backpack, as well as your budget. For my treks, I have mostly slept and eaten in shelters, with the exception of [a 3-day autonomous epxerience in Belgium](https://youtu.be/pol2x3JK_fc).
 
@@ -44,14 +44,14 @@ information are typically found online or within dedicated books such as "topogu
 
 When I planned my GR54 trek, I made sure to compile detailed information for each segment:
 
--   Time estimate
--   Distance
--   Elevation gain
--   Elevation drop
--   Availability of shop and shelters
--   What official stage is the segment part of
+- Time estimate
+- Distance
+- Elevation gain
+- Elevation drop
+- Availability of shop and shelters
+- What official stage is the segment part of
 
-![GR54 stages plan](/img/posts/trail-running-how-to/gr54_infos.png) <!-- {.center} -->
+![GR54 stages plan](/img/posts/trail-running-how-to/gr54_infos.png)
 
 One key resource that I highly recommend is finding a GPS trace of the trail. This can be a lifesaver when you're out there on the trail, making sure you stay on course and don't get lost. I typically look for _GPX_ files, which can be loaded onto a smartphone app like _Gaia GPS_ for easy reference.
 
@@ -77,17 +77,17 @@ With all this knowledge in hand, you're ready for your adventure. Get ready to e
 
 Then, here are some more practical tips:
 
--   Arrange your different clothes in compression packs for efficient backpack organization
--   Use toe socks to prevent rubbing between your toes and avoid blisters
--   Set up elastic laces for effort-less shoe slip on and off. They also provide a strong yet flexible hold
--   Hook some carabiners to your backpack, it will be handy in different ways, such as letting your clothes dry while hiking
--   Opt for foldable hiking poles for quick and easy dismounting
--   Have a running belt to store a few stuff around your waist, with straps on the back to hold poles
--   If you are into music, bring wired earbuds that don't require recharging, use guiche clips to lock the cable onto your backpack straps
--   Carry mixed nuts with you for snacks. Get sweet and salted mix
--   Red tiger's balm will help your muscle recovery
+- Arrange your different clothes in compression packs for efficient backpack organization
+- Use toe socks to prevent rubbing between your toes and avoid blisters
+- Set up elastic laces for effort-less shoe slip on and off. They also provide a strong yet flexible hold
+- Hook some carabiners to your backpack, it will be handy in different ways, such as letting your clothes dry while hiking
+- Opt for foldable hiking poles for quick and easy dismounting
+- Have a running belt to store a few stuff around your waist, with straps on the back to hold poles
+- If you are into music, bring wired earbuds that don't require recharging, use guiche clips to lock the cable onto your backpack straps
+- Carry mixed nuts with you for snacks. Get sweet and salted mix
+- Red tiger's balm will help your muscle recovery
 
-![What was in my backpack](/img/posts/trail-running-how-to/gtfpc_backpack.jpg) <!-- {.center} -->
+![What was in my backpack](/img/posts/trail-running-how-to/gtfpc_backpack.jpg)
 
 If you're interested in specific brands and models, check out [what was in the backpack](https://lighterpack.com/r/yeawl8) of my latest trip.
 
@@ -99,7 +99,7 @@ Hiking requires more than just physical endurance; it also demands a functional 
 
 For reference, here's a look at my own 6-months volume of walking and running over the years.
 
-![6-months volume of walking and running chart](/img/posts/trail-running-how-to/running_mileage.png) <!-- {.center} -->
+![6-months volume of walking and running chart](/img/posts/trail-running-how-to/running_mileage.png)
 
 I began running somewhat regularly in 2013 and ran my first ever 10km in 1 hours and 7 minutes back then. Unfortunately, I could not find my tracking data for that period. The above chart is based on _Strava_ data, which I started using in 2019.
 
@@ -109,6 +109,6 @@ Remember, hiking can be a challenging and rewarding experience. But it's importa
 
 ## See you in the moutains
 
-![Simon Myway on the GR54](/img/posts/trail-running-how-to/gr54_pic.jpg) <!-- {.center} -->
+![Simon Myway on the GR54](/img/posts/trail-running-how-to/gr54_pic.jpg)
 
 Thank you for taking the time to read my tips! Of course, recall that what works for me may not work for everyone, and there are many different ways to approach a trek. Take what you find useful and adapt it to your own needs and preferences. If you have any further questions, please don't hesitate to reach out to me directly.
