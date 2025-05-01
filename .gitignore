@@ -1,6 +1,8 @@
 nodemon.json
 content/videos.json
 
+.env.local
+
 # VS Code
 .vscode
 
