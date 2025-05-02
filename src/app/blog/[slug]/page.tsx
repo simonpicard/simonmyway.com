@@ -69,18 +69,15 @@ export default async function BlogPost({ params }: Props) {
                   </table>
                 </div>
               ),
-              img: ({src, alt, ...props}) => {
-                if (!src) return null;
+              img: ({src, alt}) => {
+                if (!src || typeof src !== 'string') return null;
                 return (
                     <Image
                       src={src}
                       alt={alt || ''}
                       className="mx-auto rounded-lg block my-4"
-                      // @ts-ignore - Next.js Image component accepts string or number for width/height
                       width={800}
-                      // @ts-ignore - Next.js Image component accepts string or number for width/height
                       height={400}
-                      {...props}
                     />
                 );
               }
