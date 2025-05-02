@@ -28,7 +28,7 @@ async function getVideosFromYouTubeAPI(): Promise<Video[]> {
       title: item.snippet.title,
       description: item.snippet.description,
       date: item.snippet.publishedAt, // Keep as ISO string
-      thumbnail: item.snippet.thumbnails.medium.url,
+      thumbnail: item.snippet.thumbnails.maxres?.url || item.snippet.thumbnails.high?.url || item.snippet.thumbnails.medium.url,
       video_id: item.id.videoId,
     }))
   } catch (error) {
