@@ -63,15 +63,15 @@ export default function RootLayout({
           src="https://plausible.io/js/plausible.compat.outbound-links.file-downloads.js"
         />
       </head>
-      <body className="font-base text-base leading-body text-dark-secondary bg-dark-background text-rendering-optimizeLegibility">
-        <div className="min-h-screen justify-center max-w-[800px] mx-auto">
+      <body className="font-sans text-base leading-body text-dark-primary bg-dark-background text-rendering-optimizeLegibility">
+        <div className="min-h-screen justify-center max-w-[800px] mx-auto p-1">
             <header className="w-full px-4 py-5">
               <nav>
                 <ul className="flex flex-wrap justify-center gap-3">
-                  <li>
+                  <li className="w-full text-center mb-2 sm:mb-0 sm:w-auto">
                     <Link href="/" className="no-underline hover:underline font-bold">Simon Myway</Link>
                   </li>
-                  <li>
+                  <li className="hidden sm:block">
                     <span className="text-dark-secondary">|</span>
                   </li>
                   <li>
@@ -104,19 +104,21 @@ export default function RootLayout({
                 </div>
               <footer className="px-5 py-5">
                 <div className="text-center">
-                  <p className="flex flex-wrap justify-center gap-3">
+                  <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2 sm:gap-3">
                     <a href="mailto:simon@ourway.be" className="no-underline hover:underline">Mail</a>
-                    <span className="text-dark-secondary">|</span>
+                    <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="https://www.linkedin.com/in/picard-simon/" className="no-underline hover:underline">LinkedIn</a>
-                    <span className="text-dark-secondary">|</span>
+                    <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="https://github.com/simonpicard" className="no-underline hover:underline">GitHub</a>
-                    <span className="text-dark-secondary">|</span>
+                    <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="https://www.youtube.com/@simonmyway" className="no-underline hover:underline">YouTube</a>
-                    <span className="text-dark-secondary">|</span>
+                    <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="https://www.instagram.com/simon.myway/" className="no-underline hover:underline">Instagram</a>
-                    <span className="text-dark-secondary">|</span>
+                    <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="https://www.twitch.tv/simonmyway" className="no-underline hover:underline">Twitch</a>
-                  </p>
+                    <span className="hidden sm:inline text-dark-secondary">|</span>
+                    <a href="http://eepurl.com/h2ICR1" className="no-underline hover:underline">Newsletter</a>
+                  </div>
                 </div>
               </footer>
             </main>

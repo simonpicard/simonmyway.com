@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import PageContent from '@/components/PageContent';
+import PageHeader from '@/components/PageHeader';
 import { formatDate } from '@/lib/utils';
 import { getAllPosts } from '@/lib/posts';
 
@@ -15,27 +17,41 @@ export default async function Home() {
 
   return (
     <main>
-      <p className="px-5 py-4 border-b border-dark-border-default bg-dark-canvas-subtle font-bold">
-        Hi, and welcome! While on my way, I am happy to share some of my thoughts with you - Simon
-      </p>
-      <div className="flex flex-col gap-2 px-5 py-4">
-        {formattedPosts.map((post) => (
-          <div key={post.slug} className="flex items-center justify-between">
-            <Link 
-              href={`/blog/${post.slug}`} 
-              className="font-medium hover:underline no-underline decoration-skip-ink"
-            >
-              {post.title}
-            </Link>
-            <time 
-              dateTime={post.date} 
-              className="tabular-nums tracking-tight whitespace-pre"
-            >
-              {post.formattedDate}
-            </time>
-          </div>
-        ))}
-      </div>
+      <PageHeader>
+        <p className="font-bold">
+          Hi, and welcome! While on my way, I am happy to share some of my thoughts with you - Simon
+        </p>
+      </PageHeader>
+      <PageContent>
+        <div className="flex flex-col gap-2">
+          {formattedPosts.map((post) => (
+            <div key={post.slug} className="flex flex-col sm:flex-row sm:items-start justify-between">
+              <Link 
+                href={`/blog/${post.slug}`} 
+                className="font-medium hover:underline no-underline decoration-skip-ink w-full sm:w-auto"
+              >
+                {post.title}
+              </Link>
+              <time 
+                dateTime={post.date} 
+                className="tabular-nums tracking-tight whitespace-pre hidden sm:inline text-dark-secondary"
+              >
+                {post.formattedDate}
+              </time>
+              <time 
+                dateTime={post.date} 
+                className="tabular-nums tracking-tight whitespace-pre sm:hidden text-dark-secondary"
+              >
+                {new Date(post.date).toLocaleDateString('en-GB', {
+                  day: '2-digit',
+                  month: '2-digit',
+                  year: 'numeric'
+                }).replace(/\//g, '-')}
+              </time>
+            </div>
+          ))}
+        </div>
+      </PageContent>
     </main>
   );
 } 

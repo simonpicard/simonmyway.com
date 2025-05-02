@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'base': ['Open Sans', '-apple-system', 'BlinkMacSystemFont', 'avenir next', 'avenir', 'helvetica', 'helvetica neue', 'ubuntu', 'roboto', 'noto', 'segoe ui', 'arial', 'sans-serif'],
-        'code': ['San Francisco Mono', 'Monaco', 'Consolas', 'Lucida Console', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'monospace'],
+        'sans': ['Open Sans', '-apple-system', 'BlinkMacSystemFont', 'avenir next', 'avenir', 'helvetica', 'helvetica neue', 'ubuntu', 'roboto', 'noto', 'segoe ui', 'arial', 'sans-serif'],
+        'mono': ['San Francisco Mono', 'Monaco', 'Consolas', 'Lucida Console', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'monospace'],
       },
       colors: {
         'light-primary': '#111',
@@ -19,7 +19,7 @@ const config: Config = {
         'light-code': '#fff',
         'light-code-background': '#fff',
         'dark-primary': '#c9d1d9',
-        'dark-secondary': '#c9d1d9',
+        'dark-secondary': '#8b949e',
         'dark-background': '#0d1117',
         'dark-code': '#0d1117',
         'dark-code-background': '#0d1117',

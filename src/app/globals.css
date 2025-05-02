@@ -1,15 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";  
 
-@layer base {
-  body {
-    @apply font-base text-base leading-body text-dark-secondary bg-dark-background;
-  }
-}
+@config "../../tailwind.config.ts";
 
-@layer components {
-  .text-rendering-optimizeLegibility {
+
+@utility text-rendering-optimizeLegibility {
     text-rendering: optimizeLegibility;
-  }
 } 
