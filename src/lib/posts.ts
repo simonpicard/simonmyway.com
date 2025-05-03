@@ -3,7 +3,7 @@ import matter from 'gray-matter'
 import path from 'path'
 
 const postsDirectory = path.join(process.cwd(), 'content/posts')
-const DEFAULT_IMAGE = '/img/simonmyway.png'
+const DEFAULT_IMAGE = '/img/simonmyway-og.png'
 
 export interface Post {
   slug: string
