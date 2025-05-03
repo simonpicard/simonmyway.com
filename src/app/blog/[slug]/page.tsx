@@ -1,9 +1,12 @@
+import { cleanDescription, getPostBySlug } from '@/lib/posts'
+
+import CodeBlockStyles from '@/components/CodeBlockStyles'
+import CodeHighlight from '@/components/CodeHighlight'
 import Image from 'next/image'
 import PageContent from '@/components/PageContent'
 import PageHeader from '@/components/PageHeader'
 import ReactMarkdown from 'react-markdown'
 import { formatDate } from '@/lib/utils'
-import { getPostBySlug } from '@/lib/posts'
 import { notFound } from 'next/navigation'
 import remarkGfm from 'remark-gfm'
 
@@ -16,15 +19,32 @@ export async function generateMetadata({ params }: Props) {
   const post = await getPostBySlug(slug)
   if (!post) return {}
 
+  const description = cleanDescription(post.content)
+  const imageUrl = post.img?.startsWith('http') ? post.img : `https://simonmyway.com${post.img}`
+
   return {
     title: `${post.title} - Simon Myway`,
-    description: post.content.slice(0, 160),
+    description,
     openGraph: {
       title: post.title,
-      description: post.content.slice(0, 160),
-      ...(post.img && {
-        images: [{ url: post.img }],
-      }),
+      description,
+      type: 'article',
+      publishedTime: post.date,
+      authors: ['Simon Myway'],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description,
+      images: [imageUrl],
     },
   }
 }
@@ -46,20 +66,33 @@ export default async function BlogPost({ params }: Props) {
       </PageHeader>
       <PageContent>
         <article className="prose prose-lg max-w-none prose-headings:text-dark-primary prose-p:text-dark-primary prose-strong:text-dark-primary prose-a:text-blue-400 hover:prose-a:text-blue-300 prose-code:text-blue-300 prose-pre:bg-dark-canvas-subtle prose-pre:text-dark-primary prose-blockquote:text-dark-primary prose-blockquote:border-dark-border-default prose-hr:border-dark-border-default prose-li:text-dark-primary prose-ul:text-dark-primary prose-ol:text-dark-primary prose-table:text-dark-primary prose-th:text-dark-primary prose-td:text-dark-primary prose-th:border-dark-border-default prose-td:border-dark-border-default prose-img:mx-auto prose-img:rounded-lg prose-img:my-4 text-justify">
+          <CodeBlockStyles />
+          <CodeHighlight />
           <ReactMarkdown 
             remarkPlugins={[remarkGfm]}
             components={{
               h1: () => null, // Skip rendering the h1 in markdown
-              code: ({className, children, ...props}) => {
+              code: ({node, className, children, ...props}: {node?: any, className?: string, children?: React.ReactNode, [key: string]: any}) => {
                 const match = /language-(\w+)/.exec(className || '')
-                return match ? (
-                  <code className={`font-code ${className}`} {...props}>
-                    {children}
-                  </code>
-                ) : (
-                  <code className="font-code" {...props}>
-                    {children}
-                  </code>
+                const language = match ? match[1] : 'text'
+                const isInline = !className?.includes('language-')
+                
+                if (isInline) {
+                  return (
+                    <code className={`font-code ${className}`} {...props}>
+                      {children}
+                    </code>
+                  )
+                }
+
+                return (
+                  <div className="relative">
+                    <pre className={`language-${language} ${className}`} {...props}>
+                      <code className={`language-${language}`}>
+                        {children}
+                      </code>
+                    </pre>
+                  </div>
                 )
               },
               table: ({children, ...props}) => (

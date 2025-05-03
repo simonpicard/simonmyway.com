@@ -19,8 +19,8 @@ export default function AboutPage() {
         <Image
           src={`/img/simonmyway.gif?${new Date().getTime()}`}
           alt="Simon Myway animated logo"
-          width={800}
-          height={400}
+          width={600}
+          height={387}
           className="rounded-lg mx-auto"
           unoptimized={true}
           priority
