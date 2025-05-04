@@ -99,7 +99,7 @@ export default function RootLayout({
               </nav>
             </header>
             <main className="flex-1">
-                <div className="bg-dark-background border border-dark-border-default rounded-box">
+                <div className="bg-dark-background border border-dark-border-default rounded-md">
                   {children}
                 </div>
               <footer className="px-5 py-5">
