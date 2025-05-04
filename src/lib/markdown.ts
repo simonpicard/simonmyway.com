@@ -1,16 +1,13 @@
 import MarkdownIt from 'markdown-it'
-import { ReactElement } from 'react'
-import ReactMarkdown from 'react-markdown'
 import matter from 'gray-matter'
-import remarkGfm from 'remark-gfm'
 
 const BASE_URL = 'https://simonmyway.com'
 
 const md = new MarkdownIt({
   html: true,
-  linkify: true,
+  linkify: false,
   typographer: true,
-  breaks: true,
+  breaks: false,
   xhtmlOut: true // This ensures proper XHTML output
 })
 
