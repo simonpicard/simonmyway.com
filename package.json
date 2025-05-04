@@ -12,7 +12,9 @@
   "license": "ISC",
   "dependencies": {
     "axios": "latest",
+    "css": "^3.0.0",
     "gray-matter": "latest",
+    "highlight.js": "^11.11.1",
     "markdown-it": "latest",
     "markdown-it-decorate": "latest",
     "next": "latest",
@@ -25,6 +27,8 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.5",
     "@tailwindcss/typography": "latest",
+    "@types/css": "^0.0.38",
+    "@types/highlight.js": "^9.12.4",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "latest",
     "@types/prismjs": "^1.26.5",
