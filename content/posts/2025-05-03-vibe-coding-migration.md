@@ -3,7 +3,7 @@
 If you've been following my articles, you'll know that I created this website three years ago as a way to learn JavaScript programming.
 Back then, I followed an Express.js tutorial and applied it to build this website.
 While functional, Express.js is relatively outdated compared to modern frameworks that make developers' lives easier.
-I experienced this firsthand when I built [Urbanex](www.urbanex.be) using Next.js and React, the development experience was much more pleasant.
+I experienced this firsthand when I built [Urbanex](https://www.urbanex.be) using Next.js and React, the development experience was much more pleasant.
 Next.js's built-in routing, server-side rendering, and component-based architecture made development smoother and more intuitive.
 Additionally, Next.js offers better navigation and performance out of the box, without requiring extra configuration or third-party libraries.
 However, the main reason I decided to migrate this blog to Next.js was to host it for free on Vercel, compared to the $7/month I was paying on Heroku for the Express version.

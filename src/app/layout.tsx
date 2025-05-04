@@ -118,6 +118,8 @@ export default function RootLayout({
                     <a href="https://www.twitch.tv/simonmyway" className="no-underline hover:underline">Twitch</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="http://eepurl.com/h2ICR1" className="no-underline hover:underline">Newsletter</a>
+                    <span className="hidden sm:inline text-dark-secondary">|</span>
+                    <a href="https://simonmyway.com/feed.xml" className="no-underline hover:underline">RSS</a>
                   </div>
                 </div>
               </footer>

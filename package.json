@@ -25,6 +25,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.5",
     "@tailwindcss/typography": "latest",
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "latest",
     "@types/prismjs": "^1.26.5",
     "@types/react": "latest",
