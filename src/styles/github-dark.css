@@ -96,3 +96,8 @@ hue-6-2: #e6c07b
 .hljs-link {
     text-decoration: underline;
 }
+
+.plaintext {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}

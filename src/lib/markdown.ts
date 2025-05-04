@@ -18,23 +18,21 @@ const hljsTheme = fs.readFileSync(
 function convertCssToInlineStyles(html: string): string {
   // Create a map of class names to styles
   const classStyles = new Map<string, string>()
-  
+
   // Parse the CSS
   const { stylesheet } = parse(hljsTheme)
-  
+
   if (stylesheet?.rules) {
     stylesheet.rules.forEach((rule: Rule | Comment | AtRule) => {
       if (rule.type === 'rule' && 'selectors' in rule && rule.selectors) {
         rule.selectors.forEach((selector: string) => {
-          if (selector.startsWith('.hljs')) {
-            const className = selector.replace('.', '')
-            const declarations = rule.declarations
-              ?.filter((d: Declaration | Comment): d is Declaration => d.type === 'declaration')
-              .map((d: Declaration) => `${d.property}: ${d.value}`)
-              .join('; ')
-            if (declarations) {
-              classStyles.set(className, declarations)
-            }
+          const className = selector.replace('.', '')
+          const declarations = rule.declarations
+            ?.filter((d: Declaration | Comment): d is Declaration => d.type === 'declaration')
+            .map((d: Declaration) => `${d.property}: ${d.value}`)
+            .join('; ')
+          if (declarations) {
+            classStyles.set(className, declarations)
           }
         })
       }
@@ -62,9 +60,9 @@ const md = new MarkdownIt({
       try {
         const highlighted = hljs.highlight(str, { language: lang, ignoreIllegals: true }).value
         return `<pre><code class="hljs language-${lang}">${highlighted}</code></pre>`
-      } catch (__) {}
+      } catch (__) { }
     }
-    return `<pre><code class="hljs">${md.utils.escapeHtml(str)}</code></pre>`
+    return `<pre><code class="hljs plaintext">${md.utils.escapeHtml(str)}</code></pre>`
   }
 })
 
@@ -84,13 +82,13 @@ function makeAbsoluteUrl(url: string): string {
 
 export function convertMarkdownToHtml(markdown: string): string {
   const { content } = matter(markdown)
-  
+
   // Convert markdown to HTML
   let html = md.render(content)
-  
+
   // Convert highlight.js classes to inline styles
   html = convertCssToInlineStyles(html)
-  
+
   // Convert all relative URLs to absolute in the HTML
   html = html.replace(
     /(src|href)="([^"]+)"/g,
@@ -102,6 +100,6 @@ export function convertMarkdownToHtml(markdown: string): string {
     /<img([^>]+)\/>/g,
     (match: string, attributes: string) => `<img${attributes} style="max-width: 100%; height: auto; display: block; margin: 1em auto;" />`
   )
-  
+
   return html
 } 
