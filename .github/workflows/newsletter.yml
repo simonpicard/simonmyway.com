@@ -1,0 +1,36 @@
+name: Newsletter Dispatch
+
+on:
+  schedule:
+    # Run once a day at 10 AM CET (9 AM UTC)
+    - cron: "0 9 * * *"
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  check-and-send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip" # Enable caching of pip dependencies
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check for new posts
+        id: check-feed
+        run: python scripts/check_feed.py
+
+      - name: Send newsletter
+        if: steps.check-feed.outputs.new_entries == 'true'
+        env:
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          MAILCHIMP_LIST_ID: ${{ secrets.MAILCHIMP_LIST_ID }}
+          MAILCHIMP_SERVER_PREFIX: ${{ secrets.MAILCHIMP_SERVER_PREFIX }}
+        run: python scripts/send_newsletter.py
