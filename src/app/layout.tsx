@@ -95,6 +95,12 @@ export default function RootLayout({
                   <li>
                     <a href="/pdf/cv_picard_simon.pdf" target="_blank" rel="noopener noreferrer" className="no-underline hover:underline">Resume</a>
                   </li>
+                  <li>
+                    <span className="text-dark-secondary">|</span>
+                  </li>
+                  <li>
+                    <a href="https://eepurl.com/h2ICR1" target="_blank" rel="noopener noreferrer" className="no-underline hover:underline">Newsletter</a>
+                  </li>
                 </ul>
               </nav>
             </header>
@@ -116,8 +122,6 @@ export default function RootLayout({
                     <a href="https://www.instagram.com/simon.myway/" className="no-underline hover:underline">Instagram</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="https://www.twitch.tv/simonmyway" className="no-underline hover:underline">Twitch</a>
-                    <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="http://eepurl.com/h2ICR1" className="no-underline hover:underline">Newsletter</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
                     <Link href="/feed.xml" className="no-underline hover:underline">RSS</Link>
                   </div>

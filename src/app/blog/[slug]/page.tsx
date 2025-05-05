@@ -121,6 +121,11 @@ export default async function BlogPost({ params }: Props) {
           <time dateTime={post.date} className="text-dark-secondary">
             {formattedDate}
           </time>
+          <div className="mt-4">
+            <a href="https://eepurl.com/h2ICR1" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+              Get future articles in your inbox
+            </a>
+          </div>
         </article>
       </PageContent>
     </main>
