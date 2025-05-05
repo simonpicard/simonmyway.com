@@ -35,6 +35,7 @@ def create_campaign(client, title):
         return campaign["id"]
     except ApiClientError as e:
         print(f"Error creating campaign: {str(e)}", file=sys.stderr)
+        print(f"Error details: {e.__dict__}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -70,6 +71,7 @@ def set_campaign_content(client, campaign_id, title, link, content):
         client.campaigns.set_content(campaign_id, {"html": email_content})
     except ApiClientError as e:
         print(f"Error setting campaign content: {str(e)}", file=sys.stderr)
+        print(f"Error details: {e.__dict__}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -78,6 +80,7 @@ def send_campaign(client, campaign_id):
         client.campaigns.send(campaign_id)
     except ApiClientError as e:
         print(f"Error sending campaign: {str(e)}", file=sys.stderr)
+        print(f"Error details: {e.__dict__}", file=sys.stderr)
         sys.exit(1)
 
 
@@ -104,6 +107,8 @@ def main():
 
     except Exception as e:
         print(f"Error: {str(e)}", file=sys.stderr)
+        print(f"Error type: {type(e)}", file=sys.stderr)
+        print(f"Error details: {e.__dict__}", file=sys.stderr)
         sys.exit(1)
 
 
