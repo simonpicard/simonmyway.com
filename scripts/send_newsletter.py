@@ -53,7 +53,7 @@ def set_campaign_content(client, campaign_id, title, link, content):
         email_content = f"""
         <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
             
-            <p style="font-size: 16px; margin-bottom: 30px;">
+            <p style="font-size: 16px; margin-bottom: 30px; font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;">
                 Hi, Simon here. I've just published a new blog post. You can read it 
                 <a href="{link}" style="color: #3498db;">on my blog</a> 
                 or continue reading below:
