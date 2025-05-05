@@ -25,12 +25,22 @@ jobs:
 
       - name: Check for new posts
         id: check-feed
-        run: python scripts/check_feed.py
+        run: |
+          output=$(python scripts/check_feed.py)
+          echo "$output"
+          if [[ "$output" == *"new_entries=true"* ]]; then
+            entries=$(echo "$output" | sed -n '/entries<<EOF/,/EOF/p' | sed '1d;$d')
+            echo "entries=$entries" >> $GITHUB_OUTPUT
+            echo "has_entries=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_entries=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Send newsletter
-        if: steps.check-feed.outputs.new_entries == 'true'
+        if: steps.check-feed.outputs.has_entries == 'true'
         env:
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
           MAILCHIMP_LIST_ID: ${{ secrets.MAILCHIMP_LIST_ID }}
           MAILCHIMP_SERVER_PREFIX: ${{ secrets.MAILCHIMP_SERVER_PREFIX }}
+          ENTRIES: ${{ steps.check-feed.outputs.entries }}
         run: python scripts/send_newsletter.py

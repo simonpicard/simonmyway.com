@@ -1,7 +1,12 @@
-nodemon.json
 content/videos.json
-
 .env.local
+
+# python
+.mypy_cache
+.pytest_cache
+.venv
+__pycache__
+notebooks/
 
 # VS Code
 .vscode
