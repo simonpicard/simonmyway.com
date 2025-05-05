@@ -24,7 +24,7 @@ def create_campaign(client, title):
                 "type": "regular",
                 "recipients": {"list_id": os.environ["MAILCHIMP_LIST_ID"]},
                 "settings": {
-                    "subject_line": f"New Blog Post: {title}",
+                    "subject_line": f"{title}",
                     "title": f"Blog Post: {title}",
                     "from_name": "Simon Myway",
                     "reply_to": "simon@ourway.be",
@@ -42,7 +42,7 @@ def create_campaign(client, title):
 def format_content(content):
     """Format the HTML content for email."""
     return f"""
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif; line-height: 1.6; color: #333;">
         {content}
     </div>
     """
@@ -52,14 +52,11 @@ def set_campaign_content(client, campaign_id, title, link, content):
     try:
         email_content = f"""
         <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h1 style="color: #2c3e50; margin-bottom: 20px;">
-                New Blog Post: {title}
-            </h1>
             
             <p style="font-size: 16px; margin-bottom: 30px;">
-                I've just published a new blog post. You can read it 
+                Hi, Simon here. I've just published a new blog post. You can read it 
                 <a href="{link}" style="color: #3498db;">on my blog</a> 
-                or continue reading below.
+                or continue reading below:
             </p>
             
             <div style="border-top: 1px solid #eee; padding-top: 20px;">
