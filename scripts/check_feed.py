@@ -54,7 +54,7 @@ def is_from_yesterday(date_str):
     date = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
 
     # Get yesterday's date in UTC
-    yesterday = datetime.now(timezone.utc) - timedelta(days=2)
+    yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     yesterday_start = yesterday.replace(hour=0, minute=0, second=0, microsecond=0)
     yesterday_end = yesterday.replace(hour=23, minute=59, second=59, microsecond=999999)
 
