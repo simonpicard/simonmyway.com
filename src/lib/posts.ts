@@ -35,13 +35,13 @@ function extractFirstImage(content: string): string | undefined {
   return match ? match[1] : undefined
 }
 
-export function cleanDescription(content: string): string {
+export function cleanDescription(content: string, length: number = 160): string {
   // Remove frontmatter if present
   const { content: markdownContent } = matter(content)
-  
+
   // Remove the title (first h1)
   const withoutTitle = markdownContent.replace(/^#\s+.+$/m, '')
-  
+
   // Remove markdown formatting
   return withoutTitle
     .replace(/#{1,6}\s/g, '')           // Remove headings
@@ -54,7 +54,7 @@ export function cleanDescription(content: string): string {
     .replace(/\n/g, ' ')                // Replace newlines with spaces
     .replace(/\s+/g, ' ')               // Normalize spaces
     .trim()
-    .slice(0, 160)                      // Limit length
+    .slice(0, length)                      // Limit length
 }
 
 export async function getAllPosts(): Promise<Post[]> {
@@ -66,7 +66,7 @@ export async function getAllPosts(): Promise<Post[]> {
       const fullPath = path.join(postsDirectory, filename)
       const fileContents = await fs.readFile(fullPath, 'utf8')
       const { data, content } = matter(fileContents)
-      
+
       // Extract title from first h1 if not in frontmatter
       const title = data.title || content.match(/^#\s+(.+)$/m)?.[1] || filename
       const slug = slugify(title)

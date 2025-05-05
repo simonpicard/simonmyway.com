@@ -119,7 +119,7 @@ export default function RootLayout({
                     <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="http://eepurl.com/h2ICR1" className="no-underline hover:underline">Newsletter</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://simonmyway.com/feed.xml" className="no-underline hover:underline">RSS</a>
+                    <Link href="/feed.xml" className="no-underline hover:underline">RSS</Link>
                   </div>
                 </div>
               </footer>
