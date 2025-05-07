@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata, Viewport } from 'next';
 
 import Link from 'next/link';
+import PlausibleProvider from 'next-plausible';
 
 export const viewport: Viewport = {
   themeColor: '#0d1117',
@@ -56,15 +57,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          defer
-          data-domain="simonmyway.com"
-          src="https://plausible.io/js/plausible.compat.outbound-links.file-downloads.js"
-        />
-      </head>
+      <head />
       <body className="font-sans text-base leading-body text-dark-primary bg-dark-background text-rendering-optimizeLegibility">
-        <div className="min-h-screen justify-center max-w-[800px] mx-auto p-1">
+        <PlausibleProvider domain="simonmyway.com" trackOutboundLinks trackFileDownloads>
+          <div className="min-h-screen justify-center max-w-[800px] mx-auto p-1">
             <header className="w-full px-4 py-5">
               <nav>
                 <ul className="flex flex-wrap justify-center gap-3">
@@ -129,6 +125,7 @@ export default function RootLayout({
               </footer>
             </main>
           </div>
+        </PlausibleProvider>
       </body>
     </html>
   );

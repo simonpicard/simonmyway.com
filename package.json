@@ -18,6 +18,7 @@
     "markdown-it": "latest",
     "markdown-it-decorate": "latest",
     "next": "latest",
+    "next-plausible": "^3.12.4",
     "prismjs": "^1.30.0",
     "react": "latest",
     "react-dom": "latest",
