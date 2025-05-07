@@ -3,7 +3,7 @@ name: Newsletter Dispatch
 on:
   schedule:
     # Run once a day at 10 AM CET (9 AM UTC)
-    - cron: "0 9 * * *"
+    - cron: "0 12 * * *"
   workflow_dispatch: # Allow manual trigger
 
 jobs:

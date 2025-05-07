@@ -61,7 +61,7 @@ def set_campaign_content(client: Client, campaign_id: str, link: str, content: s
             "avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, "
             "'segoe ui', arial, sans-serif"
         )
-        email_content = f"""  # noqa: E501
+        email_content = f"""
         <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
             <p style="font-size: 16px; margin-bottom: 30px;
                 font-family: {font_family};">

@@ -1,8 +1,13 @@
-@import "tailwindcss";  
+@import "tailwindcss";
 
 @config "../../tailwind.config.ts";
 
 
 @utility text-rendering-optimizeLegibility {
     text-rendering: optimizeLegibility;
-} 
+}
+
+/* Global link styles - only hover effect */
+a {
+    @apply hover:text-blue-300 hover:underline underline sm:no-underline;
+}

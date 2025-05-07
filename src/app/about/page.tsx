@@ -32,7 +32,7 @@ export default function AboutPage() {
 
         <p>
           Find out why and how I started this website on{' '}
-          <Link href="/blog/i-have-been-coding-for-more-than-15-years-but-never-in-javascript" className="underline hover:font-bold">
+          <Link href="/blog/i-have-been-coding-for-more-than-15-years-but-never-in-javascript" className="!underline">
             my very first blog post
           </Link>
           .
@@ -43,35 +43,35 @@ export default function AboutPage() {
 
         <ul className="list-disc pl-5">
           <li>
-            <a href="mailto:simon@ourway.be" className="underline hover:font-bold">Mail</a>
+            <a href="mailto:simon@ourway.be" className="underline hover:text-blue-300">Mail</a>
           </li>
           <li>
-            <a href="http://eepurl.com/h2ICR1" target="_blank" rel="noopener noreferrer" className="underline hover:font-bold">
+            <a href="http://eepurl.com/h2ICR1" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
               Newsletter
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/picard-simon/" target="_blank" rel="noopener noreferrer" className="underline hover:font-bold">
+            <a href="https://www.linkedin.com/in/picard-simon/" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
           </li>
           <li>
-            <a href="https://github.com/simonpicard" target="_blank" rel="noopener noreferrer" className="underline hover:font-bold">
+            <a href="https://github.com/simonpicard" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
               GitHub
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/@simonmyway" target="_blank" rel="noopener noreferrer" className="underline hover:font-bold">
+            <a href="https://www.youtube.com/@simonmyway" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
               YouTube
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/simon.myway/" target="_blank" rel="noopener noreferrer" className="underline hover:font-bold">
+            <a href="https://www.instagram.com/simon.myway/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
               Instagram
             </a>
           </li>
           <li>
-            <a href="https://www.twitch.tv/simonmyway" target="_blank" rel="noopener noreferrer" className="underline hover:font-bold">
+            <a href="https://www.twitch.tv/simonmyway" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
               Twitch
             </a>
           </li>

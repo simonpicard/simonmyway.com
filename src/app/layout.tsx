@@ -69,37 +69,37 @@ export default function RootLayout({
               <nav>
                 <ul className="flex flex-wrap justify-center gap-3">
                   <li className="w-full text-center mb-2 sm:mb-0 sm:w-auto">
-                    <Link href="/" className="no-underline hover:underline font-bold">Simon Myway</Link>
+                    <Link href="/" className="font-bold no-underline">Simon Myway</Link>
                   </li>
                   <li className="hidden sm:block">
                     <span className="text-dark-secondary">|</span>
                   </li>
                   <li>
-                    <Link href="/" className="no-underline hover:underline">Blog</Link>
+                    <Link href="/" className="no-underline">Blog</Link>
                   </li>
                   <li>
                     <span className="text-dark-secondary">|</span>
                   </li>
                   <li>
-                    <Link href="/videos" className="no-underline hover:underline">Videos</Link>
+                    <Link href="/videos" className="no-underline">Videos</Link>
                   </li>
                   <li>
                     <span className="text-dark-secondary">|</span>
                   </li>
                   <li>
-                    <Link href="/about" className="no-underline hover:underline">About</Link>
+                    <Link href="/about" className="no-underline">About</Link>
                   </li>
                   <li>
                     <span className="text-dark-secondary">|</span>
                   </li>
                   <li>
-                    <a href="/pdf/cv_picard_simon.pdf" target="_blank" rel="noopener noreferrer" className="no-underline hover:underline">Resume</a>
+                    <a href="/pdf/cv_picard_simon.pdf" target="_blank" rel="noopener noreferrer" className="no-underline">Resume</a>
                   </li>
                   <li>
                     <span className="text-dark-secondary">|</span>
                   </li>
                   <li>
-                    <a href="https://eepurl.com/h2ICR1" target="_blank" rel="noopener noreferrer" className="no-underline hover:underline">Newsletter</a>
+                    <a href="https://eepurl.com/h2ICR1" target="_blank" rel="noopener noreferrer" className="no-underline">Newsletter</a>
                   </li>
                 </ul>
               </nav>
@@ -111,19 +111,19 @@ export default function RootLayout({
               <footer className="px-5 py-5">
                 <div className="text-center">
                   <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2 sm:gap-3">
-                    <a href="mailto:simon@ourway.be" className="no-underline hover:underline">Mail</a>
+                    <a href="mailto:simon@ourway.be" className="no-underline">Mail</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://www.linkedin.com/in/picard-simon/" className="no-underline hover:underline">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/picard-simon/" className="no-underline">LinkedIn</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://github.com/simonpicard" className="no-underline hover:underline">GitHub</a>
+                    <a href="https://github.com/simonpicard" className="no-underline">GitHub</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://www.youtube.com/@simonmyway" className="no-underline hover:underline">YouTube</a>
+                    <a href="https://www.youtube.com/@simonmyway" className="no-underline">YouTube</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://www.instagram.com/simon.myway/" className="no-underline hover:underline">Instagram</a>
+                    <a href="https://www.instagram.com/simon.myway/" className="no-underline">Instagram</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://www.twitch.tv/simonmyway" className="no-underline hover:underline">Twitch</a>
+                    <a href="https://www.twitch.tv/simonmyway" className="no-underline">Twitch</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <Link href="/feed.xml" className="no-underline hover:underline">RSS</Link>
+                    <Link href="/feed.xml" className="no-underline">RSS</Link>
                   </div>
                 </div>
               </footer>

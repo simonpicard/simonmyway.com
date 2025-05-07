@@ -28,7 +28,7 @@ export default async function Home() {
             <div key={post.slug} className="flex flex-col sm:flex-row sm:items-start justify-between">
               <Link 
                 href={`/blog/${post.slug}`} 
-                className="font-medium hover:underline no-underline decoration-skip-ink w-full sm:w-auto"
+                className="font-medium decoration-skip-ink w-full sm:w-auto"
               >
                 {post.title}
               </Link>
