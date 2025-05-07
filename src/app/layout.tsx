@@ -75,10 +75,10 @@ export default function RootLayout({
                     <span className="text-dark-secondary">|</span>
                   </li>
                   <li>
-                    <Link href="/" className="no-underline">Blog</Link>
+                    <Link href="/" className="no-underline hidden sm:block">Blog</Link>
                   </li>
                   <li>
-                    <span className="text-dark-secondary">|</span>
+                    <span className="text-dark-secondary  hidden sm:block">|</span>
                   </li>
                   <li>
                     <Link href="/videos" className="no-underline">Videos</Link>
