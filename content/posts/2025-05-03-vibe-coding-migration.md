@@ -40,7 +40,7 @@ export default function BlogPage() {
 }
 ```
 
-Thus, I had to follow up with:
+Thus, I had to follow up with (yes, with the typos):
 
 ```
 now find a way to include all my blog posts, they are MD, display them, also each blog post as a title that should be listed on the index
