@@ -1,0 +1,86 @@
+# Assume Python 3.11
+target-version = "py311"
+
+# Maximum line length
+line-length = 120
+indent-width = 4
+preview = true
+
+exclude = ["*.ipynb"] # remving notebooks
+
+
+# Formatting configuration
+[format]
+indent-style = "space"
+quote-style = "double"
+line-ending = "auto"
+docstring-code-format = true
+docstring-code-line-length = 80
+preview = true
+skip-magic-trailing-comma = false
+
+
+[lint]
+select = [
+    "E",    # pycodestyle errors
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "W",    # pycodestyle warnings
+    "B",    # flake8-bugbear
+    "C4",   # flake8-comprehensions
+    "UP",   # pyupgrade
+    "PL",   # pylint
+    "RUF",  # ruff-specific
+    "PERF", # performance-related rules
+    "SIM",  # simplify
+    "FBT",  # flake8-boolean-trap
+    "ERA",  # eradicate (remove commented-out code)
+    "T20",  # flake8-print
+    "TID",  # tidy imports
+    "ARG",  # flake8-unused-arguments
+    "PIE",  # flake8-pie
+    "RSE",  # flake8-raise
+    "RET",  # flake8-return
+    "SLF",  # flake8-self
+    "ANN",  # flake8-annotations
+]
+
+# Exclude a variety of commonly ignored directories.
+ignore = [
+    "E501",    # line-too-long
+    "N801",    # invalid-name
+    "D100",    # missing-module-docstring
+    "D101",    # missing-class-docstring
+    "D102",    # missing-function-docstring
+    "PLR0904", # too-many-instance-attributes
+    "PLR0913", # too-many-arguments
+    "FIX002",  # fixme
+    "G004",    # logging-fstring-interpolation
+    "PLR0915", # too-many-locals
+    "PLR0911", # too-many-return-statements
+    "ANN401",  # dynamically typed expressions
+]
+
+# Exclude a variety of commonly ignored directories.
+exclude = [".git", ".ruff_cache", ".venv", ".mypy_cache", ".pytest_cache"]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Enable isort rules.
+isort.known-first-party = ["src"]
+isort.known-third-party = ["fastapi"]
+isort.combine-as-imports = true
+isort.force-single-line = false
+isort.force-sort-within-sections = true
+
+# Enable pydantic plugin
+extend-select = ["PLC", "PLE", "PLR", "PLW"]
+
+[lint.pydocstyle]
+convention = "google"
