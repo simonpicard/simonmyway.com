@@ -89,7 +89,7 @@ export default function RootLayout({
                     <span className="text-dark-secondary">|</span>
                   </li>
                   <li>
-                    <a href="/pdf/cv_picard_simon.pdf" target="_blank" rel="noopener noreferrer" className="no-underline">Resume</a>
+                    <a href="/pdf/resume_picard_simon.pdf" target="_blank" rel="noopener noreferrer" className="no-underline">Resume</a>
                   </li>
                   <li>
                     <span className="text-dark-secondary">|</span>
@@ -101,9 +101,9 @@ export default function RootLayout({
               </nav>
             </header>
             <main className="flex-1">
-                <div className="bg-dark-background border border-dark-border-default rounded-md">
-                  {children}
-                </div>
+              <div className="bg-dark-background border border-dark-border-default rounded-md">
+                {children}
+              </div>
               <footer className="px-5 py-5">
                 <div className="text-center">
                   <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2 sm:gap-3">

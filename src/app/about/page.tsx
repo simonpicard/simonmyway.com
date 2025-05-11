@@ -14,7 +14,7 @@ export default function AboutPage() {
       <PageHeader>
         <h1 className="text-dark-primary text-3xl font-bold">About</h1>
       </PageHeader>
-      
+
       <PageContent>
         <Image
           src={`/img/simonmyway.gif?${new Date().getTime()}`}
@@ -37,7 +37,7 @@ export default function AboutPage() {
           </Link>
           .
         </p>
-        
+
         <br />
         <h2 className="text-dark-primary text-2xl font-bold">Get and keep in touch</h2>
 
@@ -76,6 +76,9 @@ export default function AboutPage() {
             </a>
           </li>
         </ul>
+        <div className="mt-4">
+          <Link href="/">Return to homepage</Link>
+        </div>
       </PageContent>
     </main>
   )

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import PageContent from '@/components/PageContent'
 import PageHeader from '@/components/PageHeader'
 import { formatDate } from '@/lib/utils'
@@ -45,6 +46,9 @@ export default async function VideosPage() {
               </a>
             </div>
           ))}
+        </div>
+        <div className="mt-4">
+          <Link href="/">Return to homepage</Link>
         </div>
       </PageContent>
     </main>
