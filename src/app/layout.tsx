@@ -111,13 +111,9 @@ export default function RootLayout({
                     <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="https://www.linkedin.com/in/picard-simon/" className="no-underline">LinkedIn</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://github.com/simonpicard" className="no-underline">GitHub</a>
-                    <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://www.youtube.com/@simonmyway" className="no-underline">YouTube</a>
-                    <span className="hidden sm:inline text-dark-secondary">|</span>
                     <a href="https://www.instagram.com/simon.myway/" className="no-underline">Instagram</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
-                    <a href="https://www.twitch.tv/simonmyway" className="no-underline">Twitch</a>
+                    <a href="https://www.strava.com/athletes/44307339" className="no-underline">Strava</a>
                     <span className="hidden sm:inline text-dark-secondary">|</span>
                     <Link href="/feed.xml" className="no-underline">RSS</Link>
                   </div>

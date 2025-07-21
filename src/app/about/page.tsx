@@ -56,6 +56,16 @@ export default function AboutPage() {
             </a>
           </li>
           <li>
+            <a href="https://www.instagram.com/simon.myway/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.strava.com/athletes/44307339" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
+              Strava
+            </a>
+          </li>
+          <li>
             <a href="https://github.com/simonpicard" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
               GitHub
             </a>
@@ -63,11 +73,6 @@ export default function AboutPage() {
           <li>
             <a href="https://www.youtube.com/@simonmyway" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
               YouTube
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/simon.myway/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
-              Instagram
             </a>
           </li>
           <li>
