@@ -27,7 +27,7 @@ export default function AboutPage() {
         />
 
         <p>
-          I'm a Belgian computer scientist who likes to create and share content about my journey. When I'm not coding, you'll find me chasing vert on mountain trails or testing yet-another training plan (CrossFit / HYROX experiments incoming).
+          I&apos;m a Belgian computer scientist who likes to create and share content about my journey. When I&apos;m not coding, you&apos;ll find me chasing vert on mountain trails or testing yet-another training plan (CrossFit / HYROX experiments incoming).
         </p>
 
         <p>
@@ -42,10 +42,10 @@ export default function AboutPage() {
           I cut my teeth at <strong>McKinsey&nbsp;&amp;&nbsp;Company</strong> after winning their global hackathon, progressing to Project Leader and driving machine-learning programs in banking, healthcare, pharma, chemicals and basic materials across Europe, and Northern America.
         </p>
         <p className="mt-2">
-          I've also thrived in the startup trenches, taking on CTO-level roles in early-stage teams and completing the <strong>Entrepreneur&nbsp;First London</strong> programme, designing data products, guiding cross-functional teams and shipping fast.
+          I&apos;ve also thrived in the startup trenches, taking on CTO-level roles in early-stage teams and completing the <strong>Entrepreneur&nbsp;First London</strong> programme, designing data products, guiding cross-functional teams and shipping fast.
         </p>
         <p className="mt-2">
-          Since&nbsp;2023 I've consulted independently on generative&nbsp;AI and data science, taking ideas from research notes to revenue-generating SaaS features. I've also published peer-reviewed work on real-time systems, keeping one foot in academia.
+          Since&nbsp;2023 I&apos;ve consulted independently on generative&nbsp;AI and data science, taking ideas from research notes to revenue-generating SaaS features. I&apos;ve also published peer-reviewed work on real-time systems, keeping one foot in academia.
         </p>
         <p className="mt-4 font-semibold">Typical ways I help clients:</p>
         <ul className="list-disc pl-5 space-y-1">
