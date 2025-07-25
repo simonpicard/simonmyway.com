@@ -49,12 +49,11 @@ export default function AboutPage() {
         </p>
         <p className="mt-4 font-semibold">Typical ways I help clients:</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>End-to-end generative-AI features</strong> – model research, evaluation and deployment to a live SaaS.</li>
+          <li><strong>End-to-end generative-AI features</strong> - model research, evaluation and deployment to a live SaaS.</li>
           <li><strong>Predictive &amp; prescriptive analytics</strong> for pricing, demand forecasting and optimisation.</li>
-          <li><strong>Fractional CTO / Head-of-AI</strong> – strategy, roadmap, hiring and team coaching.</li>
-          <li><strong>MLOps &amp; cloud architecture</strong> – CI/CD, experiment tracking and data pipelines that scale.</li>
-          <li><strong>Executive advisory &amp; technical due-diligence</strong> – translating AI talk into board-level action plans.</li>
-          <li><strong>Academic-grade R&amp;D</strong> in real-time systems and formal verification.</li>
+          <li><strong>Fractional CTO / Head-of-AI</strong> - strategy, roadmap, hiring and team coaching.</li>
+          <li><strong>MLOps &amp; cloud architecture</strong> - CI/CD, experiment tracking and data pipelines that scale.</li>
+          <li><strong>Executive advisory &amp; technical due-diligence</strong> - translating AI talk into board-level action plans.</li>
         </ul>
 
         <p className="mt-4">
