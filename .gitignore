@@ -1,4 +1,6 @@
 content/videos.json
+drafts/
+drafts/.env
 .env.local
 
 # python
