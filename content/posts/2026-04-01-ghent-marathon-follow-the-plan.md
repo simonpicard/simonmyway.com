@@ -18,9 +18,11 @@ In short, it was the first time I had the right conditions for a marathon. The f
 
 This year, I started coaching with the Running Academy. Before that I was using Runna, but it's an app a bit like Campus Coach, not specific enough. On top of that, since I also have big trail running goals, it didn't cover my needs. I love running and I wanted to improve my training, and I was recommended [Matthis](https://www.running-academy.fr/coachs/matthis-granet/) from the Running Academy. We started working together in 2025 and he's the one who built my preparation.
 
-On average I was running five or six times per week, with the biggest weeks at 100 km. The specific preparation really started in January, after the Corrida of Brussels (a 10 km race) in December. From there, we switched to a three-month marathon block.
+On average I was running five or six times per week, with the biggest weeks at 100 km. The specific preparation really started in January, after the Corrida Brussels (a 10 km race) in December. From there, we switched to a three-month marathon block.
 
 ![Weekly training volume during marathon preparation](/img/posts/marathon-gand/weekly-volume.jpg)
+
+As you can see on the chart, I kept doing CrossFit throughout the preparation. Honestly, CrossFit probably helps very little for marathon performance, and I think if I had skipped those sessions I would have run a better time. But I do it because I enjoy it and because I want to progress in that discipline too.
 
 Shoe-wise, I wore my Adidas Boston 13 on all tempo runs and long runs during the last month of preparation, roughly 100-110 km. I had experimented with the lacing to avoid pain, and it was good to have tested them before race day. The important thing is to have them well adapted to your feet to avoid friction.
 
@@ -38,7 +40,7 @@ The diet itself wasn't that hard mentally, I wasn't particularly hungry. However
 
 ## The goal
 
-At the Corrida of Brussels in December, I was targeting 40 minutes for the 10 km. I went out a bit too fast on the first kilometer so I didn't hold, but I was close. From there, I could estimate my VO2max at 16.7 km/h, which pointed to a potential marathon pace of 4'30.
+At the Corrida Brussels in December, I was targeting 40 minutes for the 10 km. I went out a bit too fast on the first kilometer so I didn't hold, but I was close. From there, I could estimate my VO2max at 16.7 km/h, which pointed to a potential marathon pace of 4'30.
 
 In training, Matthis saw that 4'30 was a bit too fast. VO2max gives you a range, but by looking at heart rate and training sessions, we refined it. We settled on 4'40 as the target pace.
 
