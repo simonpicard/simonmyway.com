@@ -6,13 +6,13 @@ img: /img/posts/marathon-gand/1221-arrivee-stade.jpg
 
 The Ghent Marathon was my fourth marathon, but the first with a real dedicated preparation.
 
-My first was in 2020 along the canal in Brussels. I had set out for a 30-kilometer long run and thought: I'm at 30 km, if I run 12 more I've reached my goal. I just did it like that, and finished in 3h45.
+My first was in 2021 along the canal in Brussels. I had set out for a 30-kilometer long run and thought: I'm at 30 km, if I run 12 more I've reached my goal. I just did it like that, and [finished in 3h45](https://www.strava.com/activities/4787198565).
 
-In 2025, I ran the Spa-Francorchamps marathon, but I had totally underestimated the elevation gain. Great experience, but I really blew up at the end and finished in 4h. A few months later, during my preparation for the [Ultra Trail di Corsica](/blog/ultra-trail-di-corsica-my-first-100m-race), I had a 42-kilometer long run scheduled. I went back to the canal, but it was part of my trail prep so I didn't go all out, I had targeted a pace of 5 minutes per kilometer and reached that goal.
+In 2025, I ran the [Spa-Francorchamps marathon](https://www.strava.com/activities/13823319454), but I had totally underestimated the elevation gain (damn you, Raidillon). Great experience, but I really blew up at the end and finished in 4h. A few months later, during my preparation for the [Ultra Trail di Corsica](/blog/ultra-trail-di-corsica-my-first-100m-race), I had a 42-kilometer long run scheduled. I went back to the canal, but it was part of my trail prep so I didn't go all out, I had targeted a pace of 5 minutes per kilometer and [reached that goal](https://www.strava.com/activities/14363200187).
 
 ![Racing through the streets of Ghent](/img/posts/marathon-gand/0923-peloton-rues.jpg)
 
-In short, it was the first time I had the right conditions for a marathon. The first two were solo along the canal, Spa was with elevation gain I hadn't anticipated. The marathon is nothing like a 20 km or a 10 km, it's truly a distance of its own. I was eager to see what I could do with a real preparation.
+In short, it was the first time I had the right conditions for a marathon. The first and third were solo along the canal, Spa was with elevation gain I hadn't anticipated. The marathon is nothing like a 20 km or a 10 km, it's truly a distance of its own. I was eager to see what I could do with a real preparation.
 
 ## The preparation
 
@@ -66,7 +66,7 @@ The Ghent course is really beautiful. You pass through small areas where there a
 
 Between the 20th and the 30th kilometer, the muscles started to burn. Glutes, hamstrings, and toward the end the shoulders too. I was trying to relax a bit.
 
-The shoulders surprised me because I'd never experienced that before. I think I wasn't relaxed enough in my upper body. It's a bit like the feeling in Hyrox when you do the farmer carry, holding weights at the end of your arms. I thought: what's going on, I'm not carrying 20 kilos in each hand, why is this happening.
+The shoulders surprised me because I'd never experienced that before. I think I wasn't relaxed enough in my upper body. It's a bit like the feeling in Hyrox when you do the farmer carry, holding weights at the end of your arms. I thought: « what's going on, I'm not carrying 20 kilos in each hand, why is this happening? »
 
 ### Kilometers 30-42: the paradox
 
@@ -92,7 +92,7 @@ At the finish we were together. The Ghent Marathon ends inside an indoor stadium
 
 My friend Martin was there too, we had dinner together the night before. He lives in Ghent and was running the half marathon starting at 1:30pm. I arrived around 12:20, so we had time to debrief before his start.
 
-## 3h17'31"
+## [3h17'31"](https://www.strava.com/activities/17898823977/overview)
 
 Honestly, I went in not really knowing what to expect. I followed the plan, but with the minor illness and a rough patch at the end of the prep, I wasn't sure how it would go. I told myself: just go and do the work. And it worked out.
 
