@@ -103,18 +103,24 @@ export default async function BlogPost({ params }: Props) {
                   </table>
                 </div>
               ),
-              img: ({ src, alt }) => {
-                if (!src || typeof src !== 'string') return null;
-                return (
-                  <Image
-                    src={src}
-                    alt={alt || ''}
-                    className="mx-auto rounded-lg block my-4"
-                    width={800}
-                    height={400}
-                  />
-                );
-              }
+              img: (() => {
+                let imgIndex = 0;
+                return ({ src, alt }: { src?: string, alt?: string }) => {
+                  if (!src || typeof src !== 'string') return null;
+                  const isFirst = imgIndex === 0;
+                  imgIndex++;
+                  return (
+                    <Image
+                      src={src}
+                      alt={alt || ''}
+                      className="mx-auto rounded-lg block my-4"
+                      width={800}
+                      height={400}
+                      priority={isFirst}
+                    />
+                  );
+                };
+              })()
             }}
           >
             {post.content}
