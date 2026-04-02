@@ -105,7 +105,7 @@ export default async function BlogPost({ params }: Props) {
               ),
               img: (() => {
                 let imgIndex = 0;
-                return ({ src, alt }: { src?: string, alt?: string }) => {
+                return ({ src, alt }: { node?: any, src?: string | Blob, alt?: string, [key: string]: any }) => {
                   if (!src || typeof src !== 'string') return null;
                   const isFirst = imgIndex === 0;
                   imgIndex++;
