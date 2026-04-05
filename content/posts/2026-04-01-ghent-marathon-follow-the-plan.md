@@ -40,9 +40,9 @@ The diet itself wasn't that hard mentally, I wasn't particularly hungry. However
 
 ## The goal
 
-At the Corrida Brussels in December, I was targeting 40 minutes for the 10 km. I went out a bit too fast on the first kilometer so I didn't hold, but I was close. From there, I could estimate my VO2max at 16.7 km/h, which pointed to a potential marathon pace of 4'30.
+At the Corrida Brussels in December, I was targeting 40 minutes for the 10 km. I went out a bit too fast on the first kilometer so I didn't hold, but I was close. From there, I could estimate my MAS at 16.7 km/h, which pointed to a potential marathon pace of 4'30.
 
-In training, Matthis saw that 4'30 was a bit too fast. VO2max gives you a range, but by looking at heart rate and training sessions, we refined it. We settled on 4'40 as the target pace.
+In training, Matthis saw that 4'30 was a bit too fast. MAS gives you a range, but by looking at heart rate and training sessions, we refined it. We settled on 4'40 as the target pace.
 
 ## Ghent, Sunday March 29th
 
