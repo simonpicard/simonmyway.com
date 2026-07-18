@@ -12,8 +12,9 @@ const nextConfig = {
   async redirects() {
     // Legacy unprefixed URLs permanently redirect to the English version.
     // These must stay forever: external links to the old URLs will never be updated.
+    // The root path is NOT listed here: src/proxy.ts negotiates the language
+    // (cookie, then Accept-Language) and issues a temporary redirect instead.
     return [
-      { source: '/', destination: '/en', permanent: true },
       { source: '/blog/:slug', destination: '/en/blog/:slug', permanent: true },
       { source: '/about', destination: '/en/about', permanent: true },
       { source: '/videos', destination: '/en/videos', permanent: true },

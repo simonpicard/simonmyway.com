@@ -18,7 +18,7 @@ This is a personal website (simonmyway.com) built with Next.js (App Router), Typ
 
 ### Internationalization
 
-The site is bilingual (English + French). All pages live under `src/app/[locale]/` (`en` and `fr`); the root layout is `src/app/[locale]/layout.tsx`. Legacy unprefixed URLs (`/blog/:slug`, `/about`, ...) permanently redirect to `/en/...` via `next.config.js` — these redirects must never be removed. UI strings live in `src/lib/i18n.ts` (`dictionaries`); hreflang alternates are emitted per page and in the sitemap.
+The site is bilingual (English + French). All pages live under `src/app/[locale]/` (`en` and `fr`); the root layout is `src/app/[locale]/layout.tsx`. Legacy unprefixed URLs (`/blog/:slug`, `/about`, ...) permanently redirect to `/en/...` via `next.config.js` — these redirects must never be removed. The root path `/` is special: `src/proxy.ts` negotiates the language (NEXT_LOCALE cookie set by the language switcher, then Accept-Language, defaulting to en) with a temporary 307 — never make it permanent, and never extend negotiation to deep URLs. UI strings live in `src/lib/i18n.ts` (`dictionaries`); hreflang alternates are emitted per page and in the sitemap.
 
 ### Content pipeline
 

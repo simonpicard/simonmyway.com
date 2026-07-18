@@ -35,7 +35,17 @@ export default function LanguageSwitcher({ locale, blogPathMap }: Props) {
           {l === locale ? (
             <span className="font-bold" aria-current="true">{l.toUpperCase()}</span>
           ) : (
-            <Link href={targetPath(l)} className="no-underline text-dark-secondary" rel="alternate" hrefLang={l}>
+            <Link
+              href={targetPath(l)}
+              className="no-underline text-dark-secondary"
+              rel="alternate"
+              hrefLang={l}
+              onClick={() => {
+                // Remember the explicit choice: it overrides Accept-Language
+                // negotiation on the root entry point (src/proxy.ts)
+                document.cookie = `NEXT_LOCALE=${l}; path=/; max-age=31536000; SameSite=Lax`
+              }}
+            >
               {l.toUpperCase()}
             </Link>
           )}
