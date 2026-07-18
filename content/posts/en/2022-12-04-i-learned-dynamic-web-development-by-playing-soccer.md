@@ -2,7 +2,7 @@
 
 Sports-wise, I am a late bloomer. Indeed, I started practicing regularly when I was about 16 years old. I use to just not enjoy it, and I cannot blame my parents as they tried to enroll me in many occupations such as soccer, rock-climbing, table tennis and fencing. Anyhow, I now appreciate athletics a lot, I began my journey by getting in shape with weightlifting, then endurance training, i.e., jogging. Retrospectively, I commenced to love physical activity when I acquired a minimal fitness level, which was somewhat awkward to land. As a kid, I did not push my comfort zone too much.
 
-At university, I kept my fitness activity to fundamental exercise, which eventually led me to trail running, [as you may know](/blog/ultralight-trekking-the-gr54-185km-in-5-days). Upon saying goodbye to my student life, I investigated team sports. Soccer specifically, as I had been a fan for several years.
+At university, I kept my fitness activity to fundamental exercise, which eventually led me to trail running, [as you may know](/en/blog/ultralight-trekking-the-gr54-185km-in-5-days). Upon saying goodbye to my student life, I investigated team sports. Soccer specifically, as I had been a fan for several years.
 
 ## Starting late
 
@@ -33,7 +33,7 @@ What if I build a simple website where a user would search for its team, see all
 
 ## Project based learning
 
-As I shared in [my very first blog post](/blog/i-have-been-coding-for-more-than-15-years-but-never-in-javascript), I decided to get into web development, to add such new string to my bow. This personal blog is an initial step into this direction, but it is fully static, meaning that its pages' content will always be the same, regardless of the action you do on it. For my calendar sharing app, I would like the search bar to have an autocomplete function. Its suggestions will depend on what the user types in it. Thus, a static website is not the way, and it is the occasion for me to learn a new tech!
+As I shared in [my very first blog post](/en/blog/i-have-been-coding-for-more-than-15-years-but-never-in-javascript), I decided to get into web development, to add such new string to my bow. This personal blog is an initial step into this direction, but it is fully static, meaning that its pages' content will always be the same, regardless of the action you do on it. For my calendar sharing app, I would like the search bar to have an autocomplete function. Its suggestions will depend on what the user types in it. Thus, a static website is not the way, and it is the occasion for me to learn a new tech!
 
 I am about to create a web app with _client side rendering_ using _JavaScript_. Different frameworks exist for such need, and your first call is to select the one you will apply. I like to make my decisions data driven and, luckily for me, there are large surveys being rolled out on _JavaScript_ technologies by the [State of _JavaScript_](https://stateofjs.com/en-us/). Let’s look at the latest results for front-end frameworks:
 

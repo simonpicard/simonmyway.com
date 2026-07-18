@@ -12,11 +12,14 @@ import requests
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", stream=sys.stderr)
 logger = logging.getLogger(__name__)
 
-FEED_URL = "https://simonmyway.com/feed.xml"
+FEED_URLS = {
+    "en": "https://simonmyway.com/en/feed.xml",
+    "fr": "https://simonmyway.com/fr/feed.xml",
+}
 
 
-def fetch_feed() -> str:
-    response = requests.get(FEED_URL)
+def fetch_feed(url: str) -> str:
+    response = requests.get(url)
     response.raise_for_status()
     return response.text
 
@@ -76,14 +79,15 @@ def is_from_yesterday(date_str: str) -> bool:
 
 def main() -> None:
     try:
-        # Fetch and parse feed
-        feed_xml = fetch_feed()
-        entries = parse_feed(feed_xml)
-
-        # Filter entries from yesterday
-        yesterday_entries = [
-            entry for entry in entries if entry["updated"] is not None and is_from_yesterday(entry["updated"])
-        ]
+        # Fetch and parse both language feeds, tagging each entry with its language
+        yesterday_entries = []
+        for lang, url in FEED_URLS.items():
+            feed_xml = fetch_feed(url)
+            entries = parse_feed(feed_xml)
+            for entry in entries:
+                if entry["updated"] is not None and is_from_yesterday(entry["updated"]):
+                    entry["lang"] = lang
+                    yesterday_entries.append(entry)
 
         if yesterday_entries:
             print("new_entries=true")  # noqa: T201

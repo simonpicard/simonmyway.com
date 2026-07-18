@@ -2,24 +2,37 @@ import { cleanDescription, getAllPosts } from '@/lib/posts'
 
 import { NextResponse } from 'next/server'
 import { convertMarkdownToHtml } from '@/lib/markdown'
+import { dictionaries, isLocale, locales } from '@/lib/i18n'
 
 const BASE_URL = 'https://simonmyway.com'
 
-export async function GET() {
-  const posts = await getAllPosts()
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
+
+export async function GET(
+  _request: Request,
+  { params }: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await params
+  if (!isLocale(locale)) {
+    return new NextResponse('Not found', { status: 404 })
+  }
+  const t = dictionaries[locale]
+  const posts = await getAllPosts(locale)
 
   const rss = `<?xml version="1.0" encoding="UTF-8" ?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xml:lang="${locale}">
   <title>Simon Myway</title>
-  <subtitle>Personal website of Simon Myway</subtitle>
-  <link href="${BASE_URL}" />
-  <link href="${BASE_URL}/feed.xml" rel="self" type="application/atom+xml" />
-  <id>${BASE_URL}</id>
+  <subtitle>${t.feed.subtitle}</subtitle>
+  <link href="${BASE_URL}/${locale}" />
+  <link href="${BASE_URL}/${locale}/feed.xml" rel="self" type="application/atom+xml" />
+  <id>${BASE_URL}/${locale}</id>
   <updated>${new Date().toUTCString()}</updated>
   ${posts.map(post => {
     const htmlContent = convertMarkdownToHtml(post.content)
     const summary = cleanDescription(post.content, 300)
-    const postUrl = `${BASE_URL}/blog/${post.slug}`
+    const postUrl = `${BASE_URL}/${locale}/blog/${post.slug}`
     return `
     <entry>
       <title>${post.title}</title>
@@ -45,4 +58,3 @@ export async function GET() {
     },
   })
 }
-

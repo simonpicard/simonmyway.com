@@ -20,11 +20,34 @@ def setup_mailchimp() -> Client:
     return client
 
 
-def create_campaign(client: Client, title: str) -> str:
+# Subscribers pick their language via a text merge field on the Mailchimp audience
+# (tag configurable through MAILCHIMP_LANGUAGE_MERGE_TAG, default LANGUAGE).
+# French campaigns go to subscribers whose field is "fr"; English campaigns go to
+# everyone else, so existing subscribers without the field keep receiving English.
+def build_recipients(lang: str) -> dict:
+    merge_tag = os.environ.get("MAILCHIMP_LANGUAGE_MERGE_TAG", "LANGUAGE")
+    op = "is" if lang == "fr" else "not"
+    return {
+        "list_id": os.environ["MAILCHIMP_LIST_ID"],
+        "segment_opts": {
+            "match": "all",
+            "conditions": [
+                {
+                    "condition_type": "TextMerge",
+                    "op": op,
+                    "field": merge_tag,
+                    "value": "fr",
+                }
+            ],
+        },
+    }
+
+
+def create_campaign(client: Client, title: str, lang: str) -> str:
     try:
         campaign = client.campaigns.create({
             "type": "regular",
-            "recipients": {"list_id": os.environ["MAILCHIMP_LIST_ID"]},
+            "recipients": build_recipients(lang),
             "settings": {
                 "subject_line": f"{title}",
                 "title": f"[GH-CD] Blog Post: {title}",
@@ -54,21 +77,33 @@ def format_content(content: str) -> str:
     """
 
 
-def set_campaign_content(client: Client, campaign_id: str, link: str, content: str) -> None:
+INTROS = {
+    "en": (
+        "Hi, Simon here. I've just published a new blog post. "
+        'You can read it <a href="{link}" style="color: #3498db;">on my blog</a> '
+        "or continue reading below:"
+    ),
+    "fr": (
+        "Salut, c'est Simon. Je viens de publier un nouvel article. "
+        'Tu peux le lire <a href="{link}" style="color: #3498db;">sur mon blog</a> '
+        "ou continuer ta lecture ci-dessous :"
+    ),
+}
+
+
+def set_campaign_content(client: Client, campaign_id: str, link: str, content: str, lang: str) -> None:
     try:
         font_family = (
             "'Open Sans', -apple-system, BlinkMacSystemFont, 'avenir next', "
             "avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, "
             "'segoe ui', arial, sans-serif"
         )
+        intro = INTROS.get(lang, INTROS["en"]).format(link=link)
         email_content = f"""
         <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
             <p style="font-size: 16px; margin-bottom: 30px;
                 font-family: {font_family};">
-                Hi, Simon here. I've just published a new blog post.
-                You can read it
-                <a href="{link}" style="color: #3498db;">on my blog</a>
-                or continue reading below:
+                {intro}
             </p>
             <div style="border-top: 1px solid #eee; padding-top: 20px;">
                 {format_content(content)}
@@ -105,13 +140,14 @@ def main() -> None:
             title = entry["title"]
             link = entry["link"]
             content = entry["content"]
+            lang = entry.get("lang", "en")
 
-            # Create and send campaign
-            campaign_id = create_campaign(client, title)
-            set_campaign_content(client, campaign_id, link, content)
+            # Create and send campaign to the matching language segment
+            campaign_id = create_campaign(client, title, lang)
+            set_campaign_content(client, campaign_id, link, content, lang)
             send_campaign(client, campaign_id)
 
-            logger.info(f"Newsletter sent for post: {title}")
+            logger.info(f"Newsletter sent for post: {title} [{lang}]")
 
     except Exception as e:
         logger.error(f"Error: {e!s}")

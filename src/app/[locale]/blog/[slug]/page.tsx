@@ -1,4 +1,4 @@
-import { cleanDescription, getPostBySlug } from '@/lib/posts'
+import { cleanDescription, getPostBySlug, getTranslation } from '@/lib/posts'
 
 import CodeBlockStyles from '@/components/CodeBlockStyles'
 import CodeHighlight from '@/components/CodeHighlight'
@@ -7,29 +7,48 @@ import Link from 'next/link'
 import PageContent from '@/components/PageContent'
 import PageHeader from '@/components/PageHeader'
 import ReactMarkdown from 'react-markdown'
+import { dictionaries, isLocale, otherLocale } from '@/lib/i18n'
 import { formatDate } from '@/lib/utils'
 import { notFound } from 'next/navigation'
 import remarkGfm from 'remark-gfm'
 
 type Props = {
-  params: Promise<{ slug: string }>
+  params: Promise<{ locale: string, slug: string }>
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { slug } = await params
-  const post = await getPostBySlug(slug)
+  const { locale, slug } = await params
+  if (!isLocale(locale)) return {}
+  const post = await getPostBySlug(locale, slug)
   if (!post) return {}
 
   const description = cleanDescription(post.content)
   const imageUrl = post.img?.startsWith('http') ? post.img : `https://simonmyway.com${post.img}`
 
+  const translation = await getTranslation(post, otherLocale(locale))
+  const languages: Record<string, string> = {
+    [locale]: `/${locale}/blog/${post.slug}`,
+  }
+  if (translation) {
+    languages[translation.locale] = `/${translation.locale}/blog/${translation.slug}`
+  }
+  const englishPath = languages['en'] ?? `/${locale}/blog/${post.slug}`
+
   return {
     title: `${post.title} - Simon Myway`,
     description,
+    alternates: {
+      canonical: `/${locale}/blog/${post.slug}`,
+      languages: {
+        ...languages,
+        'x-default': englishPath,
+      },
+    },
     openGraph: {
       title: post.title,
       description,
       type: 'article',
+      locale: dictionaries[locale].ogLocale,
       publishedTime: post.date,
       authors: ['Simon Myway'],
       images: [
@@ -51,14 +70,18 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function BlogPost({ params }: Props) {
-  const { slug } = await params
-  const post = await getPostBySlug(slug)
+  const { locale, slug } = await params
+  if (!isLocale(locale)) {
+    notFound()
+  }
+  const post = await getPostBySlug(locale, slug)
 
   if (!post) {
     notFound()
   }
 
-  const formattedDate = formatDate(post.date)
+  const t = dictionaries[locale]
+  const formattedDate = formatDate(post.date, locale)
 
   return (
     <main>
@@ -130,14 +153,14 @@ export default async function BlogPost({ params }: Props) {
           </time>
           <div className="mt-4">
             <a href="https://eepurl.com/h2ICR1" target="_blank" rel="noopener noreferrer">
-              Get future articles in your inbox
+              {t.blog.subscribe}
             </a>
           </div>
           <div className="mt-4">
-            <Link href="/">Return to homepage</Link>
+            <Link href={`/${locale}`}>{t.blog.returnHome}</Link>
           </div>
         </article>
       </PageContent>
     </main>
   )
-} 
+}
