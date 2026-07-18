@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Build:** `npm run build`
 - **Lint (JS/TS):** `npm run lint`
 - **Lint (Python):** `ruff check scripts/` and `ruff format --check scripts/`
-- **Python scripts:** require `pip install -r requirements.txt` (Python 3.11)
+- **Python scripts:** `uv sync` then `uv run scripts/<script>.py` (Python 3.11). CI still uses `pip install -r requirements.txt` — keep both dependency lists in sync.
 
 There are no test suites in this project.
 

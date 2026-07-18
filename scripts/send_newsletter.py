@@ -23,19 +23,19 @@ def setup_mailchimp() -> Client:
 # Subscribers pick their language via a radio-button merge field on the Mailchimp
 # audience with choices "en" and "fr" (tag configurable through
 # MAILCHIMP_LANGUAGE_MERGE_TAG, default LANGUAGE).
-# French campaigns go to subscribers whose field is "fr"; English campaigns go to
-# everyone else (match "none" of "is fr"), so existing subscribers with a blank
-# field keep receiving English.
+# French campaigns go to subscribers whose field is "fr"; English campaigns use
+# op "not", which the API confirmed also matches blank fields, so existing
+# subscribers keep receiving English. (match "none" is rejected by the API.)
 def build_recipients(lang: str) -> dict:
     merge_tag = os.environ.get("MAILCHIMP_LANGUAGE_MERGE_TAG", "LANGUAGE")
     return {
         "list_id": os.environ["MAILCHIMP_LIST_ID"],
         "segment_opts": {
-            "match": "all" if lang == "fr" else "none",
+            "match": "all",
             "conditions": [
                 {
                     "condition_type": "SelectMerge",
-                    "op": "is",
+                    "op": "is" if lang == "fr" else "not",
                     "field": merge_tag,
                     "value": "fr",
                 }
