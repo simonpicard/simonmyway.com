@@ -1,4 +1,4 @@
-# Permis d'urbanisme à Bruxelles : Anderlecht le plus lent, Watermael-Boitsfort le plus rapide
+# Permis d'urbanisme à Bruxelles : Anderlecht le plus lent, Boitsfort le plus rapide
 
 Au printemps dernier, j'ai eu l'incroyable opportunité de participer à Entrepreneur First, l'incubateur de startups basé à Londres. L'expérience a été assez extraordinaire : elle m'a permis de rencontrer de nombreux esprits brillants et d'approfondir ma compréhension de l'innovation. Pour quiconque est curieux de goûter à l'atmosphère de cet environnement entrepreneurial unique, je recommande l'article [Inside Entrepreneur First: a survival guide for the world's most exclusive talent accelerator](https://highleverage.substack.com/p/inside-entrepreneur-first-a-survival).
 
