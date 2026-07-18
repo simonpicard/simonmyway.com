@@ -8,7 +8,7 @@ The Ghent Marathon was my fourth marathon, but the first with a real dedicated p
 
 My first was in 2021 along the canal in Brussels. I had set out for a 30-kilometer long run and thought: I'm at 30 km, if I run 12 more I've reached my goal. I just did it like that, and [finished in 3h45](https://www.strava.com/activities/4787198565).
 
-In 2025, I ran the [Spa-Francorchamps marathon](https://www.strava.com/activities/13823319454), but I had totally underestimated the elevation gain (damn you, Raidillon). Great experience, but I really blew up at the end and finished in 4h. A few months later, during my preparation for the [Ultra Trail di Corsica](/blog/ultra-trail-di-corsica-my-first-100m-race), I had a 42-kilometer long run scheduled. I went back to the canal, but it was part of my trail prep so I didn't go all out, I had targeted a pace of 5 minutes per kilometer and [reached that goal](https://www.strava.com/activities/14363200187).
+In 2025, I ran the [Spa-Francorchamps marathon](https://www.strava.com/activities/13823319454), but I had totally underestimated the elevation gain (damn you, Raidillon). Great experience, but I really blew up at the end and finished in 4h. A few months later, during my preparation for the [Ultra Trail di Corsica](/en/blog/ultra-trail-di-corsica-my-first-100m-race), I had a 42-kilometer long run scheduled. I went back to the canal, but it was part of my trail prep so I didn't go all out, I had targeted a pace of 5 minutes per kilometer and [reached that goal](https://www.strava.com/activities/14363200187).
 
 ![Racing through the streets of Ghent](/img/posts/marathon-gand/0923-peloton-rues.jpg)
 
