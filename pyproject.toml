@@ -1,0 +1,14 @@
+[project]
+name = "simonmyway-scripts"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "mailchimp-marketing==3.0.80",
+    "requests==2.31.0",
+    "types-requests==2.31.0.20240311",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.22",
+]
