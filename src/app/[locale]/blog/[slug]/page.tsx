@@ -128,7 +128,7 @@ export default async function BlogPost({ params }: Props) {
               ),
               img: (() => {
                 let imgIndex = 0;
-                return ({ src, alt }: { node?: any, src?: string | Blob, alt?: string, [key: string]: any }) => {
+                const MarkdownImage = ({ src, alt }: { node?: any, src?: string | Blob, alt?: string, [key: string]: any }) => {
                   if (!src || typeof src !== 'string') return null;
                   const isFirst = imgIndex === 0;
                   imgIndex++;
@@ -143,6 +143,7 @@ export default async function BlogPost({ params }: Props) {
                     />
                   );
                 };
+                return MarkdownImage;
               })()
             }}
           >
