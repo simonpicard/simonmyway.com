@@ -7,10 +7,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Dev server:** `npm run dev`
 - **Build:** `npm run build`
 - **Lint (JS/TS):** `npm run lint`
-- **Lint (Python):** `ruff check scripts/` and `ruff format --check scripts/`
-- **Python scripts:** `uv sync` then `uv run scripts/<script>.py` (Python 3.11). CI still uses `pip install -r requirements.txt` — keep both dependency lists in sync.
+- **Lint/type-check (Python):** `uv run ruff check scripts/`, `uv run ruff format --check scripts/`, `uv run ty check scripts/`
+- **Python scripts:** `uv sync` then `uv run scripts/<script>.py` (Python 3.11). Dependencies live only in `pyproject.toml`/`uv.lock` — there is no `requirements.txt`.
 
-There are no test suites in this project.
+There are no test suites in this project. CI (`.github/workflows/ci.yml`) runs the JS lint and the Python ruff/ty checks on every push to `master` and every PR; the newsletter workflow installs deps with `uv`.
 
 ## Architecture
 

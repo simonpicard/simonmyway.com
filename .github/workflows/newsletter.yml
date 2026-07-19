@@ -12,21 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
         with:
-          python-version: "3.11"
-          cache: "pip" # Enable caching of pip dependencies
+          enable-cache: true
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+        run: uv sync --frozen --no-dev
 
       - name: Check for new posts
         id: check-feed
         run: |
-          output=$(python scripts/check_feed.py)
+          output=$(uv run --no-dev scripts/check_feed.py)
           echo "$output"
           if [[ "$output" == *"new_entries=true"* ]]; then
             entries=$(echo "$output" | sed -n '/entries<<EOF/,/EOF/p' | sed '1d;$d')
@@ -43,4 +40,4 @@ jobs:
           MAILCHIMP_LIST_ID: ${{ secrets.MAILCHIMP_LIST_ID }}
           MAILCHIMP_SERVER_PREFIX: ${{ secrets.MAILCHIMP_SERVER_PREFIX }}
           ENTRIES: ${{ steps.check-feed.outputs.entries }}
-        run: python scripts/send_newsletter.py
+        run: uv run --no-dev scripts/send_newsletter.py

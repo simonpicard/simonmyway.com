@@ -2,9 +2,10 @@ import json
 import logging
 import os
 import sys
+from typing import Any
 
-from mailchimp_marketing import Client  # type: ignore
-from mailchimp_marketing.api_client import ApiClientError  # type: ignore
+from mailchimp_marketing import Client
+from mailchimp_marketing.api_client import ApiClientError
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", stream=sys.stderr)
@@ -128,28 +129,21 @@ def send_campaign(client: Client, campaign_id: str) -> None:
         sys.exit(1)
 
 
+def process_entries(client: Client, entries: list[Any]) -> None:
+    """Create and send a language-targeted campaign for each entry."""
+    for entry in entries:
+        title = entry["title"]
+        lang = entry.get("lang", "en")
+        campaign_id = create_campaign(client, title, lang)
+        set_campaign_content(client, campaign_id, entry["link"], entry["content"], lang)
+        send_campaign(client, campaign_id)
+        logger.info(f"Newsletter sent for post: {title} [{lang}]")
+
+
 def main() -> None:
     try:
-        # Get entries from environment
         entries = json.loads(os.environ["ENTRIES"])
-
-        # Setup Mailchimp client
-        client = setup_mailchimp()
-
-        # Process each entry
-        for entry in entries:
-            title = entry["title"]
-            link = entry["link"]
-            content = entry["content"]
-            lang = entry.get("lang", "en")
-
-            # Create and send campaign to the matching language segment
-            campaign_id = create_campaign(client, title, lang)
-            set_campaign_content(client, campaign_id, link, content, lang)
-            send_campaign(client, campaign_id)
-
-            logger.info(f"Newsletter sent for post: {title} [{lang}]")
-
+        process_entries(setup_mailchimp(), entries)
     except Exception as e:
         logger.error(f"Error: {e!s}")
         logger.error(f"Error type: {type(e)}")

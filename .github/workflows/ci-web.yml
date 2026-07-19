@@ -1,0 +1,45 @@
+name: CI Web
+
+# Runs only when web sources, content, or web config change.
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'src/**'
+      - 'content/**'
+      - 'public/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'next.config.js'
+      - 'tsconfig.json'
+      - 'eslint.config.mjs'
+      - '.github/workflows/ci-web.yml'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'content/**'
+      - 'public/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'next.config.js'
+      - 'tsconfig.json'
+      - 'eslint.config.mjs'
+      - '.github/workflows/ci-web.yml'
+
+jobs:
+  web:
+    name: Lint & build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Lint
+        run: npm run lint
+      # Build also type-checks the app. YouTube env vars are absent here; the
+      # videos fetch fails gracefully (empty list), so the build still passes.
+      - name: Build
+        run: npm run build

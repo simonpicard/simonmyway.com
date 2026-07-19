@@ -77,26 +77,31 @@ def is_from_yesterday(date_str: str) -> bool:
     return yesterday_start <= date <= yesterday_end
 
 
+def collect_recent_entries() -> list[dict[str, str | None]]:
+    """Fetch both language feeds and return entries published yesterday, tagged by language."""
+    recent: list[dict[str, str | None]] = []
+    for lang, url in FEED_URLS.items():
+        for entry in parse_feed(fetch_feed(url)):
+            if entry["updated"] is not None and is_from_yesterday(entry["updated"]):
+                entry["lang"] = lang
+                recent.append(entry)
+    return recent
+
+
+def emit_github_output(entries: list[dict[str, str | None]]) -> None:
+    """Print entries in the key<<EOF format the GitHub Actions workflow parses."""
+    if entries:
+        print("new_entries=true")  # ruff:ignore[print]
+        print("entries<<EOF")  # ruff:ignore[print]
+        print(json.dumps(entries))  # ruff:ignore[print]
+        print("EOF")  # ruff:ignore[print]
+    else:
+        print("new_entries=false")  # ruff:ignore[print]
+
+
 def main() -> None:
     try:
-        # Fetch and parse both language feeds, tagging each entry with its language
-        yesterday_entries = []
-        for lang, url in FEED_URLS.items():
-            feed_xml = fetch_feed(url)
-            entries = parse_feed(feed_xml)
-            for entry in entries:
-                if entry["updated"] is not None and is_from_yesterday(entry["updated"]):
-                    entry["lang"] = lang
-                    yesterday_entries.append(entry)
-
-        if yesterday_entries:
-            print("new_entries=true")  # noqa: T201
-            print("entries<<EOF")  # noqa: T201
-            print(json.dumps(yesterday_entries))  # noqa: T201
-            print("EOF")  # noqa: T201
-        else:
-            print("new_entries=false")  # noqa: T201
-
+        emit_github_output(collect_recent_entries())
     except Exception as e:
         logger.error(f"Error: {e!s}")
         sys.exit(1)
