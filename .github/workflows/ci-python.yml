@@ -1,0 +1,36 @@
+name: CI Python
+
+# Runs only when the Python scripts or their tooling config change.
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'scripts/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - 'ruff.toml'
+      - '.github/workflows/ci-python.yml'
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+      - 'ruff.toml'
+      - '.github/workflows/ci-python.yml'
+
+jobs:
+  python:
+    name: Ruff & ty
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Ruff lint
+        run: uv run ruff check scripts/
+      - name: Ruff format
+        run: uv run ruff format --check scripts/
+      - name: Type check
+        run: uv run ty check scripts/
