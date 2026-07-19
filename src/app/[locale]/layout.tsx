@@ -88,8 +88,11 @@ export default async function RootLayout({ children, params }: Props) {
             <header className="w-full px-4 py-5">
               <nav>
                 <ul className="flex flex-wrap justify-center gap-3">
-                  <li className="w-full text-center mb-2 sm:mb-0 sm:w-auto">
+                  <li className="w-full flex justify-center items-center gap-3 mb-2 sm:mb-0 sm:w-auto sm:block">
                     <Link href={`/${locale}`} className="font-bold no-underline">Simon Myway</Link>
+                    <span className="sm:hidden">
+                      <LanguageSwitcher locale={locale} blogPathMap={blogPathMap} />
+                    </span>
                   </li>
                   <li className="hidden sm:block">
                     <span className="text-dark-secondary">|</span>
@@ -121,10 +124,10 @@ export default async function RootLayout({ children, params }: Props) {
                   <li>
                     <a href="https://eepurl.com/h2ICR1" target="_blank" rel="noopener noreferrer" className="no-underline">{t.nav.newsletter}</a>
                   </li>
-                  <li>
+                  <li className="hidden sm:block">
                     <span className="text-dark-secondary">|</span>
                   </li>
-                  <li>
+                  <li className="hidden sm:block">
                     <LanguageSwitcher locale={locale} blogPathMap={blogPathMap} />
                   </li>
                 </ul>
