@@ -3,7 +3,6 @@ import '../globals.css';
 import type { Metadata, Viewport } from 'next';
 
 import Link from 'next/link';
-import PlausibleProvider from 'next-plausible';
 import { notFound } from 'next/navigation';
 
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -14,6 +13,15 @@ import { getBlogPathMap } from '@/lib/posts';
 export const viewport: Viewport = {
   themeColor: '#0d1117',
 };
+
+// Plausible is loaded manually (no next-plausible) so the script and its event
+// endpoint are served same-origin under neutral paths and slip past blockers.
+// These paths are proxied to Plausible by the rewrites in next.config.js —
+// keep them in sync. The modern per-site script embeds the domain, so no
+// data-domain attribute is needed; we only repoint the event endpoint.
+const PLAUSIBLE_SCRIPT_SRC = '/e/js/e.js';
+const PLAUSIBLE_ENDPOINT = '/e/api/e';
+const plausibleInit = `window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init({endpoint:"${PLAUSIBLE_ENDPOINT}"})`;
 
 type Props = {
   children: React.ReactNode
@@ -81,10 +89,16 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <head />
+      <head>
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <script defer src={PLAUSIBLE_SCRIPT_SRC} />
+            <script dangerouslySetInnerHTML={{ __html: plausibleInit }} />
+          </>
+        )}
+      </head>
       <body className="font-sans text-base leading-body text-dark-primary bg-dark-background text-rendering-optimizeLegibility">
-        <PlausibleProvider domain="simonmyway.com" trackOutboundLinks trackFileDownloads>
-          <div className="min-h-screen justify-center max-w-[800px] mx-auto p-1">
+        <div className="min-h-screen justify-center max-w-[800px] mx-auto p-1">
             <header className="w-full px-4 py-5">
               <nav>
                 <ul className="flex flex-wrap justify-center gap-3">
@@ -153,8 +167,7 @@ export default async function RootLayout({ children, params }: Props) {
                 </div>
               </footer>
             </main>
-          </div>
-        </PlausibleProvider>
+        </div>
       </body>
     </html>
   );
