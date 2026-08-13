@@ -23,6 +23,11 @@ const PLAUSIBLE_SCRIPT_SRC = '/e/js/e.js';
 const PLAUSIBLE_ENDPOINT = '/e/api/e';
 const plausibleInit = `window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init({endpoint:"${PLAUSIBLE_ENDPOINT}"})`;
 
+// Self-hosted Umami (first-party domain): pageview tracking plus the
+// recorder for heatmaps and session replay.
+const UMAMI_HOST = 'https://tiger.ourway.be';
+const UMAMI_WEBSITE_ID = '46e71812-cd7f-4e42-9394-981fa875fd02';
+
 type Props = {
   children: React.ReactNode
   params: Promise<{ locale: string }>
@@ -94,6 +99,8 @@ export default async function RootLayout({ children, params }: Props) {
           <>
             <script defer src={PLAUSIBLE_SCRIPT_SRC} />
             <script dangerouslySetInnerHTML={{ __html: plausibleInit }} />
+            <script defer src={`${UMAMI_HOST}/script.js`} data-website-id={UMAMI_WEBSITE_ID} />
+            <script defer src={`${UMAMI_HOST}/recorder.js`} data-website-id={UMAMI_WEBSITE_ID} />
           </>
         )}
       </head>
