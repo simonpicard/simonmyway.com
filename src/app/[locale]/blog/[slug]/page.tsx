@@ -1,4 +1,5 @@
-import { cleanDescription, getPostBySlug, getTranslation } from '@/lib/posts'
+import { cleanDescription, getAllPosts, getPostBySlug, getTranslation } from '@/lib/posts'
+import remarkPortraitPhotos, { isPortrait, portraitWidth } from '@/lib/remark-portrait-photos'
 
 import CodeBlockStyles from '@/components/CodeBlockStyles'
 import CodeHighlight from '@/components/CodeHighlight'
@@ -9,11 +10,19 @@ import PageHeader from '@/components/PageHeader'
 import ReactMarkdown from 'react-markdown'
 import { dictionaries, isLocale, otherLocale } from '@/lib/i18n'
 import { formatDate } from '@/lib/utils'
+import { getImageSizes } from '@/lib/images'
 import { notFound } from 'next/navigation'
 import remarkGfm from 'remark-gfm'
 
 type Props = {
   params: Promise<{ locale: string, slug: string }>
+}
+
+// Pre-render every post at build time, when all images are on disk to be measured.
+export async function generateStaticParams({ params }: { params: { locale: string } }) {
+  if (!isLocale(params.locale)) return []
+  const posts = await getAllPosts(params.locale)
+  return posts.map((post) => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({ params }: Props) {
@@ -82,6 +91,7 @@ export default async function BlogPost({ params }: Props) {
 
   const t = dictionaries[locale]
   const formattedDate = formatDate(post.date, locale)
+  const imageSizes = await getImageSizes(post.content)
 
   return (
     <main>
@@ -89,11 +99,11 @@ export default async function BlogPost({ params }: Props) {
         <h1 className="text-dark-primary text-3xl font-bold">{post.title}</h1>
       </PageHeader>
       <PageContent>
-        <article className="prose max-w-none prose-headings:text-dark-primary prose-p:text-dark-primary prose-strong:text-dark-primary prose-a:text-dark-primary prose-a:!underline prose-code:text-blue-300 prose-pre:bg-dark-canvas-subtle prose-pre:text-dark-primary prose-blockquote:text-dark-primary prose-blockquote:border-dark-border-default prose-hr:border-dark-border-default prose-li:text-dark-primary prose-ul:text-dark-primary prose-ol:text-dark-primary prose-table:text-dark-primary prose-th:text-dark-primary prose-td:text-dark-primary prose-th:border-dark-border-default prose-td:border-dark-border-default prose-img:mx-auto prose-img:rounded-lg prose-img:my-4">
+        <article className="post-body prose max-w-none prose-headings:text-dark-primary prose-p:text-dark-primary prose-strong:text-dark-primary prose-a:text-dark-primary prose-a:!underline prose-code:text-blue-300 prose-pre:bg-dark-canvas-subtle prose-pre:text-dark-primary prose-blockquote:text-dark-primary prose-blockquote:border-dark-border-default prose-hr:border-dark-border-default prose-li:text-dark-primary prose-ul:text-dark-primary prose-ol:text-dark-primary prose-table:text-dark-primary prose-th:text-dark-primary prose-td:text-dark-primary prose-th:border-dark-border-default prose-td:border-dark-border-default prose-img:mx-auto prose-img:rounded-lg prose-img:my-4">
           <CodeBlockStyles />
           <CodeHighlight />
           <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
+            remarkPlugins={[remarkGfm, [remarkPortraitPhotos, { sizes: imageSizes }]]}
             components={{
               h1: () => null, // Skip rendering the h1 in markdown
               code: ({ node, className, children, ...props }: { node?: any, className?: string, children?: React.ReactNode, [key: string]: any }) => {
@@ -120,7 +130,7 @@ export default async function BlogPost({ params }: Props) {
                 )
               },
               table: ({ children, ...props }) => (
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto post-clear">
                   <table className="w-full border-collapse" {...props}>
                     {children}
                   </table>
@@ -132,13 +142,16 @@ export default async function BlogPost({ params }: Props) {
                   if (!src || typeof src !== 'string') return null;
                   const isFirst = imgIndex === 0;
                   imgIndex++;
+                  const size = imageSizes[src];
+                  const portrait = isPortrait(size);
                   return (
                     <Image
                       src={src}
                       alt={alt || ''}
                       className="mx-auto rounded-lg block my-4"
                       width={800}
-                      height={400}
+                      height={size ? Math.round((800 * size.height) / size.width) : 400}
+                      sizes={portrait ? `(min-width: 768px) ${portraitWidth(size)}px, 100vw` : undefined}
                       priority={isFirst}
                     />
                   );
@@ -149,6 +162,7 @@ export default async function BlogPost({ params }: Props) {
           >
             {post.content}
           </ReactMarkdown>
+          <div className="post-clear" />
           <time dateTime={post.date} className="text-dark-secondary">
             {formattedDate}
           </time>

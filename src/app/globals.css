@@ -11,3 +11,32 @@
 a {
     @apply hover:text-blue-300 hover:underline underline sm:no-underline;
 }
+
+/* Portrait photos in blog posts. Classes are set by src/lib/remark-portrait-photos.ts.
+   On wide screens, a portrait photo is as tall as a full-width 3:2 photo: floated
+   right with the text beside it, or alone and centered. On phones, full width. */
+.post-body .post-clear,
+.post-body .post-portrait-alone,
+.post-body :is(h1, h2, h3, h4, h5, h6, hr, pre) {
+    clear: both;
+}
+
+@media (min-width: 48rem) {
+    .post-body {
+        container-type: inline-size;
+    }
+
+    .post-body .post-portrait img {
+        width: auto;
+        height: calc(100cqw * 2 / 3);
+    }
+
+    .post-body .post-portrait-float {
+        float: right;
+        margin: 0.5rem 0 1rem 1.5rem;
+    }
+
+    .post-body .post-portrait-float img {
+        margin: 0;
+    }
+}

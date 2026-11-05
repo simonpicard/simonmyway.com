@@ -44,6 +44,8 @@ A GitHub Actions workflow (`newsletter.yml`) runs daily at 10 AM CET:
 
 Blog posts render client-side using `react-markdown` + `remark-gfm` + PrismJS for syntax highlighting (see `blog/[slug]/page.tsx`). The RSS feed uses a separate server-side rendering path via markdown-it + highlight.js (`src/lib/markdown.ts`).
 
+Portrait images are detected from their real size (width/height ≤ 0.8, read with `sharp` in `src/lib/images.ts`), with no markup in the markdown. On wide screens, `src/lib/remark-portrait-photos.ts` shows them as tall as a full-width 3:2 photo, floated right, and moves them up within their section (never past a heading or another image) so the surrounding text fills the space beside them; if the section is too short, the photo is shown alone, centered (CSS in `globals.css`). Posts are pre-rendered at build (`generateStaticParams`), when the images are on disk to be measured. The RSS feed is not affected.
+
 ### Path alias
 
 `@/*` maps to `./src/*` (configured in tsconfig.json).
