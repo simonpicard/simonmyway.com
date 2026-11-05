@@ -30,8 +30,8 @@ The site is bilingual (English + French). All pages live under `src/app/[locale]
 
 ### Newsletter automation
 
-A GitHub Actions workflow (`newsletter.yml`) runs daily at 10 AM CET:
-1. `scripts/check_feed.py` — fetches both live RSS feeds (en + fr), finds entries published yesterday, outputs them as JSON tagged with their language
+A GitHub Actions workflow (`newsletter.yml`) is triggered manually (`workflow_dispatch` only, no schedule): Simon runs it himself once a post is live and reviewed — never trigger it on his behalf. Each run sends every post of the day, so it must run once per publication.
+1. `scripts/check_feed.py` — fetches both live RSS feeds (en + fr), finds entries published today in Brussels time (or on the optional `date` input / `NEWSLETTER_DATE`, `YYYY-MM-DD`), outputs them as JSON tagged with their language
 2. `scripts/send_newsletter.py` — creates and sends Mailchimp campaigns for each new entry, targeted by language: subscribers with the `LANGUAGE` merge field set to `fr` get French campaigns, everyone else gets English ones (merge tag configurable via `MAILCHIMP_LANGUAGE_MERGE_TAG`)
 
 ### Key lib modules

@@ -1,8 +1,7 @@
 # simonmyway.com
 
 Personal website and blog of Simon — [simonmyway.com](https://simonmyway.com).
-A bilingual (English / French) blog with videos, RSS feeds, and an automated
-newsletter.
+A bilingual (English / French) blog with videos, RSS feeds, and a newsletter.
 
 ## Tech stack
 
@@ -10,8 +9,8 @@ newsletter.
 - **[Tailwind CSS v4](https://tailwindcss.com/)** — dark theme only
 - **[Plausible](https://plausible.io/)** analytics, self-proxied under neutral
   paths to survive ad blockers
-- **[Mailchimp](https://mailchimp.com/)** newsletter, dispatched by a daily
-  GitHub Actions workflow
+- **[Mailchimp](https://mailchimp.com/)** newsletter, dispatched by a manually
+  triggered GitHub Actions workflow
 - **Python 3.11** (managed with **[uv](https://docs.astral.sh/uv/)**) for the
   newsletter scripts
 - Deployed on **[Vercel](https://vercel.com/)**
@@ -76,10 +75,15 @@ RSS/Atom feeds are served per language at `/en/feed.xml` and `/fr/feed.xml`.
 
 ## Newsletter automation
 
-`.github/workflows/newsletter.yml` runs daily at 10:00 CET:
+`.github/workflows/newsletter.yml` is triggered by hand, once a post is live
+and reviewed (Actions → Newsletter Dispatch → Run workflow, or
+`gh workflow run newsletter.yml`). Run it once per publication: each run sends
+every post of the day.
 
 1. `scripts/check_feed.py` reads both live feeds and finds entries published
-   the previous day, tagged by language.
+   today (Brussels time), tagged by language. The optional `date` input
+   (`YYYY-MM-DD`, or `NEWSLETTER_DATE` locally) targets another day, e.g.
+   `gh workflow run newsletter.yml -f date=2026-11-05`.
 2. `scripts/send_newsletter.py` creates and sends a Mailchimp campaign per new
    entry, targeting subscribers by language via the `LANGUAGE` merge field
    (`fr` → French campaign, everyone else → English).
