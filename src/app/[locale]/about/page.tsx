@@ -162,7 +162,7 @@ export default async function AboutPage({ params }: Props) {
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/simon.myway/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
+            <a href="https://www.instagram.com/simonpcrd/" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">
               Instagram
             </a>
           </li>
