@@ -1,10 +1,12 @@
-from datetime import UTC, datetime, timedelta
+from datetime import date, datetime
 import json
 import logging
+import os
 import re
 import sys
 from typing import cast
 import xml.etree.ElementTree as ET
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -16,6 +18,10 @@ FEED_URLS = {
     "en": "https://simonmyway.com/en/feed.xml",
     "fr": "https://simonmyway.com/fr/feed.xml",
 }
+
+# "Today" is counted in Brussels time, so a run just after midnight in Belgium
+# (still the previous day in UTC) looks for the right posts.
+BRUSSELS = ZoneInfo("Europe/Brussels")
 
 
 def fetch_feed(url: str) -> str:
@@ -64,28 +70,28 @@ def parse_feed(feed_xml: str) -> list[dict[str, str | None]]:
     return entries
 
 
-def is_from_yesterday(date_str: str) -> bool:
-    """Check if the date is from yesterday."""
-    # Parse the date string and convert to UTC datetime
-    date = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
-
-    # Get yesterday's date in UTC
-    yesterday = datetime.now(UTC) - timedelta(days=1)
-    yesterday_start = yesterday.replace(hour=0, minute=0, second=0, microsecond=0)
-    yesterday_end = yesterday.replace(hour=23, minute=59, second=59, microsecond=999999)
-
-    return yesterday_start <= date <= yesterday_end
+def target_date() -> date:
+    """Publication date to send: NEWSLETTER_DATE (YYYY-MM-DD) if set, else today in Brussels."""
+    override = os.environ.get("NEWSLETTER_DATE", "").strip()
+    if override:
+        return date.fromisoformat(override)
+    return datetime.now(BRUSSELS).date()
 
 
-def collect_recent_entries() -> list[dict[str, str | None]]:
-    """Fetch both language feeds and return entries published yesterday, tagged by language."""
-    recent: list[dict[str, str | None]] = []
+def is_published_on(date_str: str, day: date) -> bool:
+    """Feed dates are the post's date at midnight UTC, so their UTC date is the post's date."""
+    return datetime.fromisoformat(date_str.replace("Z", "+00:00")).date() == day
+
+
+def collect_entries(day: date) -> list[dict[str, str | None]]:
+    """Fetch both language feeds and return entries published on `day`, tagged by language."""
+    entries: list[dict[str, str | None]] = []
     for lang, url in FEED_URLS.items():
         for entry in parse_feed(fetch_feed(url)):
-            if entry["updated"] is not None and is_from_yesterday(entry["updated"]):
+            if entry["updated"] is not None and is_published_on(entry["updated"], day):
                 entry["lang"] = lang
-                recent.append(entry)
-    return recent
+                entries.append(entry)
+    return entries
 
 
 def emit_github_output(entries: list[dict[str, str | None]]) -> None:
@@ -101,7 +107,9 @@ def emit_github_output(entries: list[dict[str, str | None]]) -> None:
 
 def main() -> None:
     try:
-        emit_github_output(collect_recent_entries())
+        day = target_date()
+        logger.info(f"Looking for posts published on {day.isoformat()}")
+        emit_github_output(collect_entries(day))
     except Exception as e:
         logger.error(f"Error: {e!s}")
         sys.exit(1)

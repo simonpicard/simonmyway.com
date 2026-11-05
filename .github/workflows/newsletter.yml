@@ -1,10 +1,15 @@
 name: Newsletter Dispatch
 
 on:
-  schedule:
-    # Run once a day at 10 AM CET (9 AM UTC)
-    - cron: "0 9 * * *"
-  workflow_dispatch: # Allow manual trigger
+  # Manual only: run it once a post is live and reviewed
+  # (Actions → Newsletter Dispatch → Run workflow). Each run sends every post
+  # of the given day, so run it once per publication.
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Publication date of the posts to send (YYYY-MM-DD). Leave empty for today (Brussels time)."
+        required: false
+        default: ""
 
 jobs:
   check-and-send:
@@ -22,6 +27,8 @@ jobs:
 
       - name: Check for new posts
         id: check-feed
+        env:
+          NEWSLETTER_DATE: ${{ inputs.date }}
         run: |
           output=$(uv run --no-dev scripts/check_feed.py)
           echo "$output"

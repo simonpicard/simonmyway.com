@@ -9,6 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Lint (JS/TS):** `npm run lint`
 - **Lint/type-check (Python):** `uv run ruff check scripts/`, `uv run ruff format --check scripts/`, `uv run ty check scripts/`
 - **Python scripts:** `uv sync` then `uv run scripts/<script>.py` (Python 3.11). Dependencies live only in `pyproject.toml`/`uv.lock` — there is no `requirements.txt`.
+- **Auto-enhance post photos (macOS):** `swift scripts/auto_enhance.swift <output-dir> <image>...` — Core Image's automatic adjustments, metadata kept. Run once on the original photos only (not charts or screenshots), into another directory, then copy the results into `public/img/posts/<post>/`.
 
 There are no test suites in this project. CI (`.github/workflows/ci.yml`) runs the JS lint and the Python ruff/ty checks on every push to `master` and every PR; the newsletter workflow installs deps with `uv`.
 
@@ -29,8 +30,8 @@ The site is bilingual (English + French). All pages live under `src/app/[locale]
 
 ### Newsletter automation
 
-A GitHub Actions workflow (`newsletter.yml`) runs daily at 10 AM CET:
-1. `scripts/check_feed.py` — fetches both live RSS feeds (en + fr), finds entries published yesterday, outputs them as JSON tagged with their language
+A GitHub Actions workflow (`newsletter.yml`) is triggered manually (`workflow_dispatch` only, no schedule): Simon runs it himself once a post is live and reviewed — never trigger it on his behalf. Each run sends every post of the day, so it must run once per publication.
+1. `scripts/check_feed.py` — fetches both live RSS feeds (en + fr), finds entries published today in Brussels time (or on the optional `date` input / `NEWSLETTER_DATE`, `YYYY-MM-DD`), outputs them as JSON tagged with their language
 2. `scripts/send_newsletter.py` — creates and sends Mailchimp campaigns for each new entry, targeted by language: subscribers with the `LANGUAGE` merge field set to `fr` get French campaigns, everyone else gets English ones (merge tag configurable via `MAILCHIMP_LANGUAGE_MERGE_TAG`)
 
 ### Key lib modules
@@ -43,6 +44,8 @@ A GitHub Actions workflow (`newsletter.yml`) runs daily at 10 AM CET:
 ### Rendering
 
 Blog posts render client-side using `react-markdown` + `remark-gfm` + PrismJS for syntax highlighting (see `blog/[slug]/page.tsx`). The RSS feed uses a separate server-side rendering path via markdown-it + highlight.js (`src/lib/markdown.ts`).
+
+Portrait images are detected from their real size (width/height ≤ 0.8, read with `sharp` in `src/lib/images.ts`), with no markup in the markdown. On wide screens, `src/lib/remark-portrait-photos.ts` shows them as tall as a full-width 3:2 photo, floated right, and moves them up within their section (never past a heading or another image) so the surrounding text fills the space beside them; if the section is too short, the photo is shown alone, centered (CSS in `globals.css`). Posts are pre-rendered at build (`generateStaticParams`), when the images are on disk to be measured. The RSS feed is not affected.
 
 ### Path alias
 

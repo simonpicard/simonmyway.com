@@ -23,7 +23,8 @@
     "react": "latest",
     "react-dom": "latest",
     "react-markdown": "latest",
-    "remark-gfm": "latest"
+    "remark-gfm": "latest",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.5",
