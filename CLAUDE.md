@@ -9,6 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Lint (JS/TS):** `npm run lint`
 - **Lint/type-check (Python):** `uv run ruff check scripts/`, `uv run ruff format --check scripts/`, `uv run ty check scripts/`
 - **Python scripts:** `uv sync` then `uv run scripts/<script>.py` (Python 3.11). Dependencies live only in `pyproject.toml`/`uv.lock` — there is no `requirements.txt`.
+- **Auto-enhance post photos (macOS):** `swift scripts/auto_enhance.swift <output-dir> <image>...` — Core Image's automatic adjustments, metadata kept. Run once on the original photos only (not charts or screenshots), into another directory, then copy the results into `public/img/posts/<post>/`.
 
 There are no test suites in this project. CI (`.github/workflows/ci.yml`) runs the JS lint and the Python ruff/ty checks on every push to `master` and every PR; the newsletter workflow installs deps with `uv`.
 
