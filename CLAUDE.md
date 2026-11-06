@@ -55,4 +55,4 @@ Portrait images are detected from their real size (width/height ≤ 0.8, read wi
 
 ## Analytics
 
-Plausible is loaded by hand in `src/app/[locale]/layout.tsx` (no `next-plausible`), served same-origin under `/e/...` and proxied by the rewrites in `next.config.js`: keep the paths in sync. Self-hosted Umami (`tiger.ourway.be`) is loaded alongside, for pageviews, heatmaps and session replay.
+Self-hosted Umami only (`tiger.ourway.be`), loaded in `src/app/[locale]/layout.tsx` in production: pageviews, heatmaps and session replay. Plausible was removed in November 2026.

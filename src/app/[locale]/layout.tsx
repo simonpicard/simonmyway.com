@@ -14,15 +14,6 @@ export const viewport: Viewport = {
   themeColor: '#0d1117',
 };
 
-// Plausible is loaded manually (no next-plausible) so the script and its event
-// endpoint are served same-origin under neutral paths and slip past blockers.
-// These paths are proxied to Plausible by the rewrites in next.config.js —
-// keep them in sync. The modern per-site script embeds the domain, so no
-// data-domain attribute is needed; we only repoint the event endpoint.
-const PLAUSIBLE_SCRIPT_SRC = '/e/js/e.js';
-const PLAUSIBLE_ENDPOINT = '/e/api/e';
-const plausibleInit = `window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init({endpoint:"${PLAUSIBLE_ENDPOINT}"})`;
-
 // Self-hosted Umami (first-party domain): pageview tracking plus the
 // recorder for heatmaps and session replay.
 const UMAMI_HOST = 'https://tiger.ourway.be';
@@ -97,8 +88,6 @@ export default async function RootLayout({ children, params }: Props) {
       <head>
         {process.env.NODE_ENV === 'production' && (
           <>
-            <script defer src={PLAUSIBLE_SCRIPT_SRC} />
-            <script dangerouslySetInnerHTML={{ __html: plausibleInit }} />
             <script defer src={`${UMAMI_HOST}/script.js`} data-website-id={UMAMI_WEBSITE_ID} />
             <script defer src={`${UMAMI_HOST}/recorder.js`} data-website-id={UMAMI_WEBSITE_ID} />
           </>
