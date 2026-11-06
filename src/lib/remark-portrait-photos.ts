@@ -1,15 +1,20 @@
-import type { Nodes, Paragraph, Root, RootContent } from 'mdast'
+import type { Blockquote, List, Nodes, Paragraph, Root, RootContent } from 'mdast'
 import type { ImageSize } from '@/lib/images'
 
 // Portrait photos in blog posts, placed like LaTeX floats.
 //
 // On wide screens, a portrait photo is shown as tall as a full-width 3:2 photo,
-// floated right, with the surrounding text beside it. The photo never crosses a
+// floated with the surrounding text beside it, alternately on the right and on
+// the left (photos shown alone don't count). The photo never crosses a
 // "barrier" (heading, landscape image, code block, table...). It stays where it
 // is written if enough text follows it to fill its height; otherwise it moves up
 // one block at a time, at most to the start of its zone, so the text before it
 // fills the space. If the whole zone has too little text, the photo is shown
 // alone, centered. The CSS lives in globals.css; the RSS feed is not affected.
+//
+// On phones, photos are full width and must appear where they are written in
+// the markdown. So a photo moved up is grouped with the blocks it passed, and
+// on small screens the CSS shows it back after them.
 
 // Wide-screen layout: the article is 750 px wide, so a 3:2 photo is 500 px tall.
 const ARTICLE_WIDTH = 750
@@ -60,8 +65,19 @@ function sumText(nodes: RootContent[], from: number, to: number): number {
   return total
 }
 
-function setClass(node: Paragraph, className: string, hName?: string) {
+function setClass(node: Paragraph | List | Blockquote, className: string, hName?: string) {
   node.data = { ...node.data, ...(hName && { hName }), hProperties: { className } }
+}
+
+// A photo followed by the blocks written before it in the markdown, rendered
+// as <div class="post-portrait-group"> (mdast-util-to-hast turns unknown nodes
+// into divs).
+function portraitGroup(photo: RootContent, blocksAbove: RootContent[]): RootContent {
+  return {
+    type: 'portraitGroup',
+    data: { hName: 'div', hProperties: { className: 'post-portrait-group' } },
+    children: [photo, ...blocksAbove],
+  } as unknown as RootContent
 }
 
 export default function remarkPortraitPhotos({ sizes }: { sizes: Record<string, ImageSize> }) {
@@ -71,6 +87,9 @@ export default function remarkPortraitPhotos({ sizes }: { sizes: Record<string, 
   }
   const isFlow = (node: RootContent) =>
     (node.type === 'paragraph' && !imageSrc(node)) || node.type === 'list' || node.type === 'blockquote'
+
+  // Floating photos placed so far in the document, to alternate their side.
+  let floats = 0
 
   // Places the portrait photos of one zone (text and photos between two barriers).
   const arrange = (zone: RootContent[]): RootContent[] => {
@@ -96,15 +115,27 @@ export default function remarkPortraitPhotos({ sizes }: { sizes: Record<string, 
         target--
         after += textLength(nodes[target])
       }
-      const [photo] = nodes.splice(i, 1)
-      nodes.splice(target, 0, photo)
-      setClass(photo as Paragraph, 'post-portrait post-portrait-float', 'div')
+      const left = floats++ % 2 === 1
+      setClass(nodes[i] as Paragraph, `post-portrait post-portrait-float${left ? ' post-portrait-left' : ''}`, 'div')
+      if (left) {
+        // Beside a photo on the left, list bullets and quote borders would sit
+        // under the photo: the CSS moves these blocks next to it instead.
+        for (let k = target; k < end; k++) {
+          const node = nodes[k]
+          if (node.type === 'list' || node.type === 'blockquote') setClass(node, 'post-beside-left')
+        }
+      }
+      if (target < i) {
+        nodes.splice(target, i - target + 1, portraitGroup(nodes[i], nodes.slice(target, i)))
+        i = target
+      }
       start = i + 1
     }
     return nodes
   }
 
   return (tree: Root) => {
+    floats = 0
     const children: RootContent[] = []
     let zone: RootContent[] = []
     for (const node of tree.children) {

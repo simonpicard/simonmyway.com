@@ -132,9 +132,9 @@ I reach Cúber at 18:13, as night falls. Switching to night mode, I stay there a
 
 The rule: 165 bpm, and everything I have left.
 
-![Just after Cúber, headlamp on](/img/posts/mallorca/photo_frontale_apres_cuber_portrait.jpg)
-
 Ahead of me, the descent I was dreading: the Barranc de Biniaraix, 800 m of descent in one go. If it was more construction rubble, it was going to be tricky. Two days before the race, I had actually asked AI whether I could bomb the descent or whether I still had to hold back. The plan estimated it at 10'30 per kilometer, and I had replied: "If I have good legs and I'm able to go down faster, why wouldn't I?"
+
+![Just after Cúber, headlamp on](/img/posts/mallorca/photo_frontale_apres_cuber_portrait.jpg)
 
 In the end, it's a paved trail, but much more regular, and I let go. Of my whole plan, that's mostly what I had kept in mind: until Alaró, save energy; until Cúber, a push if I have it; after Cúber, everything I have left. So I enjoy myself: 8'18 per kilometer on average, at night, on a 13% grade. Ahead of me, all those little headlamps that I'm going to pick off one by one. Descents are my strength: where most runners hold back, I let go, and it's the other way around on the climbs. Twenty places gained between Cúber and Fornalutx.
 
@@ -170,9 +170,9 @@ You can see it in the results, by the way: from one checkpoint to the next, I al
 
 ### At the finish
 
-![Happy, at the finish](/img/posts/mallorca/photo_arrivee_sourire_portrait.jpg)
-
 Honestly, at the finish, I was happy. I finished 20 minutes off my plan, and I knew that plan was ambitious: I had aimed beyond my index. With the stomach and the head at the end, in the moment, I even thought I'd finish in 17 hours, or even 18.
+
+![Happy, at the finish](/img/posts/mallorca/photo_arrivee_sourire_portrait.jpg)
 
 And then, I had just run 104 kilometers. That's no small thing, and not everyone can do it. It's only the third time I've finished a race over 100 kilometers, after my two "100-mile" races. With less elevation this time, sure, but a much better-managed race. A 100+ km race is still something to be proud of.
 

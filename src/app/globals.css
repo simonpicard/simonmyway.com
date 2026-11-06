@@ -39,4 +39,65 @@ a {
     .post-body .post-portrait-float img {
         margin: 0;
     }
+
+    /* Every other floating photo goes on the left. */
+    .post-body .post-portrait-left {
+        float: left;
+        margin: 0.5rem 1.5rem 1rem 0;
+    }
+
+    /* Beside it, lists and quotes sit next to the photo as a whole: otherwise
+       their bullets or border would be under it. As a block of their own, they
+       no longer merge their margins with their first and last items. */
+    .post-body .post-beside-left {
+        display: flow-root;
+    }
+
+    .post-body .post-beside-left > :first-child {
+        margin-top: 0;
+    }
+
+    .post-body .post-beside-left > :last-child {
+        margin-bottom: 0;
+    }
+
+    /* A group starts where its first paragraph does: align the photo with it. */
+    .post-body .post-portrait-group > .post-portrait-float {
+        margin-top: 0;
+    }
+}
+
+/* Phones: a photo moved up for the float comes first in its group; show it
+   back after the text written before it in the markdown. Flex items don't
+   merge their margins, so the spacing between paragraphs is set with gap. */
+@media not all and (min-width: 48rem) {
+    .post-body .post-portrait-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+        margin-block: 1.25em;
+    }
+
+    /* Like prose's "h3 + *": only the heading's own margin. */
+    .post-body :is(h1, h2, h3, h4, h5, h6) + .post-portrait-group {
+        margin-top: 0;
+    }
+
+    .post-body .post-portrait-group > *,
+    .post-body .post-portrait-group img {
+        margin-block: 0;
+    }
+
+    /* Same for the first and last items of a list or quote. */
+    .post-body .post-portrait-group > * > :first-child {
+        margin-top: 0;
+    }
+
+    .post-body .post-portrait-group > * > :last-child {
+        margin-bottom: 0;
+    }
+
+    .post-body .post-portrait-group > .post-portrait {
+        order: 1;
+    }
 }

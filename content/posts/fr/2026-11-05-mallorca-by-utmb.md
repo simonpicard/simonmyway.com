@@ -132,9 +132,9 @@ J'arrive à Cúber à 18h13, à la tombée de la nuit. Le temps de passer en mod
 
 La consigne : 165 de cardio, et tout ce qui reste.
 
-![Juste après Cúber, la frontale allumée](/img/posts/mallorca/photo_frontale_apres_cuber_portrait.jpg)
-
 Devant moi, la descente que je redoutais : le Barranc de Biniaraix, 800 mètres de dénivelé négatif d'un coup. Si c'étaient encore des gravats de chantier, ça allait être compliqué. Deux jours avant la course, j'avais d'ailleurs demandé à l'IA si je pouvais bombarder la descente ou s'il fallait encore me retenir. Le plan l'estimait à 10'30 au kilomètre, et je lui avais répondu : « Si j'ai des bonnes jambes et que je suis capable de descendre plus vite, pourquoi est-ce que je ne le ferais pas ? »
+
+![Juste après Cúber, la frontale allumée](/img/posts/mallorca/photo_frontale_apres_cuber_portrait.jpg)
 
 Finalement, c'est un sentier pavé, mais bien plus régulier, et je me lâche. De tout mon plan, c'est surtout ça que j'avais gardé en tête : jusqu'à Alaró, parcimonie ; jusqu'à Cúber, une relance si je l'ai ; après Cúber, tout ce qui reste. Alors je me fais plaisir : 8'18 au kilomètre de moyenne, de nuit, sur une pente à 13 %. Devant moi, toutes ces petites lampes frontales que je vais récupérer une par une. Les descentes, c'est mon point fort : là où la plupart des coureurs freinent, je me lâche, et c'est l'inverse en montée. Vingt places reprises entre Cúber et Fornalutx.
 
@@ -170,9 +170,9 @@ Ils ne m'ont pas rattrapé. L'un d'eux vient me voir : « Toi, tu m'as dépassé
 
 ### À l'arrivée
 
-![Content, à l'arrivée](/img/posts/mallorca/photo_arrivee_sourire_portrait.jpg)
-
 Très honnêtement, à l'arrivée, j'étais content. Je finis à 20 minutes de mon plan, et ce plan, je le savais ambitieux : j'étais allé chercher plus loin que mon index. Avec le ventre et la tête de la fin, sur le moment, je pensais même arriver en 17 heures, voire en 18.
+
+![Content, à l'arrivée](/img/posts/mallorca/photo_arrivee_sourire_portrait.jpg)
 
 Et puis je viens de courir 104 kilomètres. Ce n'est pas rien, et ce n'est pas donné à tout le monde. Ce n'est que la troisième fois que je termine une course à trois chiffres, après mes deux formats « 100 miles ». Avec moins de dénivelé cette fois, certes, mais une course bien mieux maîtrisée. Une course de 100+ km, ça reste une fierté.
 
