@@ -7,8 +7,8 @@ A bilingual (English / French) blog with videos, RSS feeds, and a newsletter.
 
 - **[Next.js 16](https://nextjs.org/)** (App Router) + **React 19** + **TypeScript**
 - **[Tailwind CSS v4](https://tailwindcss.com/)** — dark theme only
-- **[Plausible](https://plausible.io/)** analytics, self-proxied under neutral
-  paths to survive ad blockers
+- **[Umami](https://umami.is/)** analytics, self-hosted (`tiger.ourway.be`):
+  pageviews, heatmaps and session replay
 - **[Mailchimp](https://mailchimp.com/)** newsletter, dispatched by a manually
   triggered GitHub Actions workflow
 - **Python 3.11** (managed with **[uv](https://docs.astral.sh/uv/)**) for the
