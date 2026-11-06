@@ -1,4 +1,5 @@
 content/videos.json
+next-env.d.ts
 drafts/
 drafts/.env
 .env.local
